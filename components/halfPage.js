@@ -1,0 +1,71 @@
+import { Grid, Button, Typography, useMediaQuery, Box } from "@mui/material";
+import { useTheme } from "@emotion/react";
+import Image from "next/image";
+
+function HalfPage({ data }) {
+  const theme = useTheme();
+  const mobile = useMediaQuery(theme.breakpoints.down("md"));
+  return (
+        <Grid container direction={data.reverse ? "row-reverse" : ""} sx={{ minHeight: '100vh',}}>
+          {
+            mobile ? (
+              <>
+              {
+                data.poster ? (
+                  <Box sx={{height: "100vh", filter: "brightness(50%)"}}>
+                    <video autoPlay muted loop poster={data.poster} style={{objectFit: "cover", height: "100%", width: "100%"}}>
+                      <source src={data.link} type="video/mp4"/>
+                    </video>
+                  </Box>
+                ):(
+                  <Grid item xs={12} sx={{backgroundColor: data.bg, padding: "8% 2%",}}>
+                    <Typography variant="h4" color="secondary" sx={{fontStyle: "normal", fontWeight: 500, fontSize: "14px", lineHeight: "120%", letterSpacing: 3.0}}>
+                      {data.text1}
+                    </Typography>
+                    <Typography variant="h4" color="secondary" sx={{fontStyle: "normal", fontWeight: 700, fontSize: "52px", lineHeight: "120%"}}>
+                      {data.text2}
+                    </Typography>
+                    <Typography variant="h6" color="secondary" sx={{fontStyle: "normal", fontWeight: 400, fontSize: "20px", lineHeight: "150%"}}>
+                      {data.text3}
+                    </Typography>
+                    <Button variant="outlined" color={data.buttonColor}>Learn More</Button>
+                  </Grid>
+                )
+              }
+                
+              </>
+            ): (
+              <>
+                <Grid item md={6} xs={6} sx={{padding: "8% 2%",}}>
+                  <Typography variant="h4" color="primary" sx={{fontStyle: "normal", fontWeight: 500, fontSize: "16px", lineHeight: "120%", letterSpacing: 3.0}}>
+                    {data.text1}
+                  </Typography>
+                  <Typography variant="h4" sx={{fontStyle: "normal", fontWeight: 700, fontSize: "52px", lineHeight: "120%"}}>
+                    {data.text2}
+                  </Typography>
+                  <Typography variant="h6">
+                    {data.text3}
+                  </Typography>
+                  <Button variant="outlined">Learn More</Button>
+                </Grid>
+                <Grid item xs={6} md={6} sx={{backgroundColor: data.bg}}>
+                  {
+                    data.poster ? (
+                      <video autoPlay muted loop poster={data.poster} style={{objectFit: "cover", filter: "brightness(50%)", height: "100%", width: "100%"}}>
+                        <source src={data.link} type="video/mp4"/>
+                      </video> 
+                    ) : (
+                      <Box sx={{height: "100%",display: "flex", justifyContent: "center", alignItems: "center"}}>
+                        <Image src={data.link} height="200" width="200" alt="futurelabs"></Image>
+                      </Box>
+                    )
+                  }
+                </Grid>
+              </>
+            )
+          }
+          </Grid>
+  )
+}
+
+export default HalfPage
