@@ -28,7 +28,7 @@ function FullPage({ video }) {
             {
               video.button ? (
               <Link href={video.button}>
-                <Button variant="outlined">Learn More</Button>
+                <Button variant="outlined" sx={{width: "10rem"}}>Learn More</Button>
               </Link>  
               ):(
                 ""
