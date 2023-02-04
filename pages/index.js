@@ -6,18 +6,27 @@ import FullPage from "../components/fullPage";
 const videos = [
   {
     link: "https://res.cloudinary.com/unlimitedreactive/video/upload/v1669901267/Homepage_video_qd3fs5.mp4",
-    text: "",
-    poster: "/images/homeImage1.jpg"
+    text1: "",
+    text2: "We transform ideas into phenomenal products with unprecedented foresight for outliers",
+    poster: "/images/homeImage1.jpg",
+    button: "/services",
+    showAudio: false,
   },
   {
     link: "https://res.cloudinary.com/usenmfon/video/upload/v1655290226/FutureLabs/flhy_-_Copy_abrth0.mp4",
-    text: "",
-    poster: "/images/homeImage2.webp"
+    text1: "We Strategize",
+    text2: "In God we trust, others must bring data, we take our time sifting through data and building models.",
+    poster: "/images/homeImage2.webp",
+    button: "",
+    showAudio: true,
   },
   {
     link: "https://res.cloudinary.com/not-set/video/upload/v1645534184/VID-20220217-WA0018_rtkkjs.mp4",
-    text: "",
-    poster: "/images/homeImage3.webp"
+    text1: "Seamless Cross-border Payments",
+    text2: "Securing Payments For Tomorrow on the Web",
+    poster: "/images/homeImage3.webp",
+    button: "",
+    showAudio: true,
   },
 ]
 
