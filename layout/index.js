@@ -1,6 +1,8 @@
-import DefaultToolbar from "./toolbar";
 import { useState } from "react";
+import DefaultToolbar from "./toolbar";
 import DefaultDrawer from "./drawer";
+import Contact from "./contact";
+import DefaultFooter from "./footer";
 import Container from "@mui/material/Container"
 
 export default function DefaultLayout({ children, ...props }) {
@@ -13,6 +15,8 @@ export default function DefaultLayout({ children, ...props }) {
             <Container maxWidth={false} disableGutters>
               {children}
             </Container>
+            <Contact />
+            <DefaultFooter />
         </>
   )
 }
