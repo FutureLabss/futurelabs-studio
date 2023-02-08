@@ -1,7 +1,7 @@
 import { createTheme } from "@mui/material/styles";
 
 const typographyList = {
-    large:{xs:"39px", sm:"39px", md:"4.05vw"},
+    large:{xs:"39px", sm:"39px", md:"3.0vw"},
     h1: {xs:"39px", sm:"39px", md:"4.05vw"}, //fontsize 70 
     h2: {xs:"23px", sm:"33px", md:"3.47vw"}, //fontsize 60 
     h3: {xs:"21px", sm:"28px", md:"2.89vw"}, //fontsize 50 
@@ -40,7 +40,18 @@ let theme = {
             }
           }
         }
-     },
+     },'@global': {
+        '*::-webkit-scrollbar': {
+          width: '0.4em'
+        },
+        '*::-webkit-scrollbar-track': {
+          '-webkit-box-shadow': 'inset 0 0 6px rgba(0,0,0,0.00)'
+        },
+        '*::-webkit-scrollbar-thumb': {
+          backgroundColor: 'rgba(0,0,0,.1)',
+          outline: '1px solid slategrey'
+        }
+      }
 }
 
 theme = createTheme(theme)

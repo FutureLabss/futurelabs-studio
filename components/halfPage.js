@@ -21,13 +21,13 @@ function HalfPage({ data }) {
                   </Box>
                 ):(
                   <Grid item xs={12} display="flex" flexDirection="column" justifyContent="center" sx={{backgroundColor: data.bg, padding: "0% 2%",}}>
-                    <Typography variant="h4" color="secondary" sx={{fontStyle: "normal", fontWeight: 500, fontSize: "14px", lineHeight: "120%", letterSpacing: 3.0}}>
+                    <Typography variant="h4" color="secondary" sx={{fontStyle: "normal", fontWeight: 700,  lineHeight: "120%", letterSpacing: 3.0}}>
                       {data.text1}
                     </Typography>
-                    <Typography variant="large" color="secondary" sx={{fontStyle: "normal", fontWeight: 700, fontSize: "52px", lineHeight: "120%"}}>
+                    <Typography variant="large" color="secondary" sx={{fontStyle: "normal", fontWeight: 700, lineHeight: "120%"}}>
                       {data.text2}
                     </Typography>
-                    <Typography variant="h5" color="secondary" sx={{fontStyle: "normal", fontWeight: 400, fontSize: "20px", lineHeight: "150%"}}>
+                    <Typography variant="h5" color="secondary" sx={{fontStyle: "normal", fontWeight: 400, lineHeight: "150%"}}>
                       {data.text3}
                     </Typography>
                     {
@@ -46,10 +46,10 @@ function HalfPage({ data }) {
             ): (
               <>
                 <Grid item md={6} xs={6} display="flex" flexDirection="column" justifyContent="center" sx={{padding: "0 2%",}}>
-                  <Typography variant="h4" color="primary" sx={{fontStyle: "normal", fontWeight: 500, fontSize: "16px", lineHeight: "120%", letterSpacing: 3.0}}>
+                  <Typography variant="h4" color="primary" sx={{fontStyle: "normal", fontWeight: 700,  lineHeight: "120%", letterSpacing: 3.0}}>
                     {data.text1}
                   </Typography>
-                  <Typography variant="h4" sx={{fontStyle: "normal", fontWeight: 700, fontSize: "52px", lineHeight: "120%"}}>
+                  <Typography variant="large" sx={{fontStyle: "normal", fontWeight: 700, lineHeight: "120%"}}>
                     {data.text2}
                   </Typography>
                   <Typography variant="h6">
