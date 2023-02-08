@@ -60,7 +60,7 @@ function Footer() {
         </Stack>
         <Stack sx={{height: {md: "30%", xs: "100%"}, display: "flex",  justifyContent: {md: "space-between", xs: "flex-end"}}}>
             <Grid container sx={{height: {md: "", xs: "80%"}}}>
-                <Grid item md={4} sx={{ padding: "0% 2%", display: "flex", flexDirection: "column", justifyContent: "space-between",}}>
+                <Grid item md={4} xs={12} sx={{ padding: "0% 2%", display: "flex", flexDirection: "column", justifyContent: "space-around",}}>
                     <Image src="https://res.cloudinary.com/dekbvdqnb/image/upload/v1634901054/Futurelabs-logo_1_udit2z.png" width="150" height="25" alt="futurelabs" style={{display: mobile ? "none": "block"}}/>
                     <Typography>
                         <strong>Get directions:</strong> <a href="tel:2347080343781" > +234 708 034-3781</a>
@@ -80,7 +80,7 @@ function Footer() {
                         </Link>
                     </Stack>
                 </Grid>
-                <Grid item md={4} display="flex" flexDirection="column" justifyContent="space-between" alignItems="center" >
+                <Grid item md={4} display="flex" flexDirection="column" justifyContent="space-around" alignItems="center" sx={{padding: {md: "", xs: "0% 2%"}}}>
                     <Typography variant="h5" sx={{fontWeight: 700}}>Company</Typography>
                     <Link href="">
                         <Typography sx={{fontWeight: 600}}>HOME</Typography>
@@ -95,12 +95,12 @@ function Footer() {
                         <Typography sx={{fontWeight: 600}}>BLOG</Typography>
                     </Link> 
                 </Grid>
-                <Grid item md={4} sx={{ padding: "0% 2%",}} display="flex" flexDirection="column" justifyContent="space-between" >
+                <Grid item md={4} xs={12} sx={{ padding: "0% 2%",}} display="flex" flexDirection="column" justifyContent="space-around" >
                     <Typography variant="h5" sx={{fontWeight: 700}}>Let&apos;s Get in Touch</Typography>
-                    <Typography variant="p">Sign up to receive our newsletter on industry trends</Typography>
+                    <Typography variant="caption">Sign up to receive our newsletter on industry trends</Typography>
                     <Stack sx={{display: "flex", flexDirection: "row"}}>
-                        <TextField id="outlined-basic" label="Enter email here..." variant="outlined" />
-                        <Button variant="contained" sx={{color: "white"}}>Send</Button>
+                        <TextField size="small" id="outlined-basic" label="Enter email here..." variant="outlined" />
+                        <Button variant="contained" size="small" sx={{color: "white"}}>Send</Button>
                     </Stack>
                 </Grid>
             </Grid>
