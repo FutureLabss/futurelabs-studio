@@ -5,8 +5,8 @@ import HalfPage from "../components/halfPage";
 const videos = [
     {
         link: "https://res.cloudinary.com/unlimitedreactive/video/upload/v1669905979/About_Hero_Video_kuskdy.mp4",
-        text1: "",
-        text2: "WE ARE FUTURISTS!",
+        text1: "WE ARE FUTURISTS!",
+        text2: "",
         text3: "",
         poster: "/images/about_3.jpg",
         button: "",
@@ -14,8 +14,8 @@ const videos = [
     },
     {
         link: "https://res.cloudinary.com/unlimitedreactive/video/upload/v1669906852/about_4_oakopa.mp4",
-        text1: "",
-        text2: "THE BEST FUTURE IMAGINABLE",
+        text1: "THE BEST FUTURE IMAGINABLE",
+        text2: "",
         text3: "We draw from our deep skillsets across multiple domains to build the best future imaginable",
         poster: "/images/about_4.webp",
         button: "",
@@ -23,8 +23,8 @@ const videos = [
     },
     {
         link: "https://res.cloudinary.com/unlimitedreactive/video/upload/v1669907205/about_underscore_7_cfhk5q.mp4",
-        text1: "",
-        text2: "DREAM BIG",
+        text1: "DREAM BIG",
+        text2: "",
         text3: "The future was created by men who dared to dream it better than they met it.",
         poster: "/images/about_7.jpg",
         button: "",

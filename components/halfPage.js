@@ -20,7 +20,26 @@ function HalfPage({ data }) {
                     <Text data={data}/>                
                   </Box>
                 ):(
-                  <Text data={data}/> 
+                  <Grid item xs={12} display="flex" flexDirection="column" justifyContent="center" sx={{backgroundColor: data.bg, padding: "0% 2%",}}>
+                    <Typography variant="h4" color="secondary" sx={{fontStyle: "normal", fontWeight: 500, fontSize: "14px", lineHeight: "120%", letterSpacing: 3.0}}>
+                      {data.text1}
+                    </Typography>
+                    <Typography variant="large" color="secondary" sx={{fontStyle: "normal", fontWeight: 700, fontSize: "52px", lineHeight: "120%"}}>
+                      {data.text2}
+                    </Typography>
+                    <Typography variant="h5" color="secondary" sx={{fontStyle: "normal", fontWeight: 400, fontSize: "20px", lineHeight: "150%"}}>
+                      {data.text3}
+                    </Typography>
+                    {
+                      data.button ? (
+                        <Link href={data.button}>
+                          <Button variant="outlined" sx={{width: "10rem", marginTop: "1rem"}} color={data.buttonColor}>Learn More</Button>
+                        </Link>  
+                        ):(
+                          ""
+                      )
+                    }
+                  </Grid>
                 )
               }
               </>
