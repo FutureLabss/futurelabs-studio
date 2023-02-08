@@ -37,6 +37,7 @@ const data = [
     text3: "Giving Users the best experience while turning ideas into impactful solutions one happy client per time.",
     link: "https://res.cloudinary.com/dremo/image/upload/v1638808890/Futurelabs-logo_2_sgxejz.svg",
     bg: "#FF9000",
+    button: "/about",
     reverse: false,
     buttonColor: "secondary"
   },
@@ -46,6 +47,7 @@ const data = [
     text3: "We are gifted storytellers, driving viral brand adoption through compelling and relatable stories about our products and services.",
     link: "https://res.cloudinary.com/usenmfon/video/upload/v1655290725/FutureLabs/Comp_1_1_rr5xub.mp4",
     bg: "",
+    button: "/strategy",
     poster: "/images/about_2.webp",
     reverse: true,
   },

@@ -1,7 +1,7 @@
 import '../styles/globals.css'
 import "@fontsource/inter"
 import { ThemeProvider } from '@mui/material'
-import { theme } from "../styles/theme"
+import theme from "../styles/theme"
 import createEmotionCache from '../styles/createEmotionCache'
 import { CacheProvider } from '@emotion/react'
 

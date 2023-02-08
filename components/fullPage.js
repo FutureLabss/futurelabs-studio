@@ -14,13 +14,16 @@ function FullPage({ video }) {
   return (
     <Box sx={{height: "100vh",  position: "relative"}}>
         <Video data={video}/>
-        <Box sx={{width:"100%",  padding: "8% 2%", position: "absolute", bottom: 0, left: 0, zIndex: 1}}>
-          <Stack sx={{maxWidth: "500px"}}>
+        <Box sx={{width:"100%",  padding: "8% 2%", position: "absolute", bottom: {md: "0.5rem", xs: "2.5rem"}, left: 0, zIndex: 1}}>
+          <Stack sx={{maxWidth: {md: "450px", xs: "300px"}, marginBottom:  {md: "0.2rem", xs: "1rem"},}}>
             <Typography variant="h4" color="secondary" sx={{fontStyle: "normal", fontWeight: 700, fontSize: "52px", lineHeight: "120%"}}>
               {video.text1}
             </Typography>
-            <Typography variant="h6" color="secondary" sx={{fontStyle: "normal", fontWeight: 400, fontSize: "20px", lineHeight: "150%"}}>
+            <Typography variant="h4" color="secondary" sx={{fontStyle: "normal", fontWeight: 400, lineHeight: "150%"}}>
               {video.text2}
+            </Typography>
+            <Typography variant="h6" color="secondary">
+              {video.text3}
             </Typography>
           </Stack>
           <Grid container justifyContent="space-between">
