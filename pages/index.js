@@ -56,21 +56,11 @@ const data = [
 function HomePage() {
   return (
     <DefaultLayout>
-        <Box sx={{}}>
-          <FullPage video={videos[0]} />
-        </Box>
-        <Box sx={{}}>
-          <HalfPage data={data[0]}/>
-        </Box>
-        <Box sx={{}}>
-          <HalfPage data={data[1]} />
-        </Box>
-        <Box sx={{}}>
-          <FullPage video={videos[1]} />
-        </Box>
-        <Box sx={{}}>
-          <FullPage video={videos[2]} />
-        </Box>
+      <FullPage video={videos[0]} />
+      <HalfPage data={data[0]}/>
+      <HalfPage data={data[1]} />
+      <FullPage video={videos[1]} />
+      <FullPage video={videos[2]} />
     </DefaultLayout>
   )
 }
