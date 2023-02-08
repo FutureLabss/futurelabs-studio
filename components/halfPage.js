@@ -7,7 +7,7 @@ function HalfPage({ data }) {
   const theme = useTheme();
   const mobile = useMediaQuery(theme.breakpoints.down("md"));
   return (
-        <Grid container direction={data.reverse ? "row-reverse" : ""} sx={{ minHeight: '100vh',}}>
+        <Grid container direction={data.reverse ? "row-reverse" : "row"} sx={{ minHeight: '100vh',}}>
           {
             mobile ? (
               <>
@@ -17,7 +17,7 @@ function HalfPage({ data }) {
                     <Video data={data}/>                    
                   </Box>
                 ):(
-                  <Grid item xs={12} display="flex" direction="column" justifyContent="center" sx={{backgroundColor: data.bg, padding: "0% 2%",}}>
+                  <Grid item xs={12} display="flex" flexDirection="column" justifyContent="center" sx={{backgroundColor: data.bg, padding: "0% 2%",}}>
                     <Typography variant="h4" color="secondary" sx={{fontStyle: "normal", fontWeight: 500, fontSize: "14px", lineHeight: "120%", letterSpacing: 3.0}}>
                       {data.text1}
                     </Typography>
@@ -34,7 +34,7 @@ function HalfPage({ data }) {
               </>
             ): (
               <>
-                <Grid item md={6} xs={6} display="flex" direction="column" justifyContent="center" sx={{padding: "0 2%",}}>
+                <Grid item md={6} xs={6} display="flex" flexDirection="column" justifyContent="center" sx={{padding: "0 2%",}}>
                   <Typography variant="h4" color="primary" sx={{fontStyle: "normal", fontWeight: 500, fontSize: "16px", lineHeight: "120%", letterSpacing: 3.0}}>
                     {data.text1}
                   </Typography>

@@ -6,7 +6,7 @@ function Contact() {
     <Box sx={{height: "100vh", display: "flex", flexDirection: "column", justifyContent: "center", padding: "0 2%"}}>
             <Typography variant="h4" sx={{textAlign: "center", fontWeight: 700, fontSize: "32px",}}>Contact Us</Typography>
         <Grid container sx={{ height: "70%"}}>
-            <Grid item md={6} display="flex" direction="column" justifyContent="space-between">
+            <Grid item md={6} display="flex" flexDirection="column" justifyContent="space-between">
                 <Stack>
                     <InputLabel htmlFor="name" sx={{ fontWeight: 700, fontSize: "18px",}}>My name is</InputLabel>
                     <Input sx={{width: "20rem"}} id="name" placeholder="Your name" />
@@ -24,7 +24,7 @@ function Contact() {
                     <Input sx={{width: "20rem"}} id="email" placeholder="Your@email.com" />
                 </Stack>     
             </Grid>
-            <Grid item md={6} display="flex" direction="column">
+            <Grid item md={6} display="flex" flexDirection="column">
                 <Stack>
                     <InputLabel htmlFor="message" sx={{ fontWeight: 700, fontSize: "18px",}}>Message</InputLabel>
                     <TextField
