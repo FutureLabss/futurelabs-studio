@@ -51,7 +51,7 @@ const data = [
   },
 ]
 
-function HomePage() {
+function HomePage() {    
   return (
     <DefaultLayout>
         <Box sx={{}}>
@@ -60,7 +60,7 @@ function HomePage() {
         <Box sx={{}}>
           <HalfPage data={data[0]}/>
         </Box>
-        <Box sx={{}}>
+        <Box sx={{}}>  
           <HalfPage data={data[1]} />
         </Box>
         <Box sx={{}}>
