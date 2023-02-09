@@ -10,7 +10,7 @@ function Text({ data }) {
         <Typography variant="large" color="secondary" sx={{fontStyle: "normal", fontWeight: 700, lineHeight: "120%"}}>
           {data.text2}
         </Typography>
-        <Typography variant="h5" color="secondary" sx={{fontStyle: "normal", fontWeight: 400, lineHeight: "150%"}}>
+        <Typography variant="h6" color="secondary" sx={{fontStyle: "normal", fontWeight: 400, lineHeight: "150%"}}>
           {data.text3}
         </Typography>
         {
