@@ -6,7 +6,7 @@ const videos = [
   {
     link: "https://res.cloudinary.com/unlimitedreactive/video/upload/v1669901267/Homepage_video_qd3fs5.mp4",
     text1: "",
-    text2: "We transform ideas into phenomenal products with unprecedented foresight for outliers",
+    text2: "We transform ideas into phenomenal products for outliers",
     poster: "/images/homeImage1.jpg",
     button: "/services",
     showAudio: false,
