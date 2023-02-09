@@ -12,7 +12,7 @@ export default function DefaultToolbar(props) {
     <Box sx={{ flexGrow: 1,}} >
       <AppBar position="fixed">
         <Toolbar>
-          <Box sx={{ flexGrow: 1 }}>
+          <Box sx={{ flexGrow: 1, paddingLeft: {md: "2rem", xs: ""}}}>
            <Link href="/">
             <Image src="https://res.cloudinary.com/dekbvdqnb/image/upload/v1634901054/Futurelabs-logo_1_udit2z.png" height="25" width="140" alt="futurelabs" />
            </Link> 

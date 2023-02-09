@@ -60,7 +60,7 @@ function Footer() {
         </Stack>
         <Stack sx={{height: {md: "30%", xs: "100%"}, display: "flex",  justifyContent: {md: "space-between", xs: "flex-end"}}}>
             <Grid container sx={{height: {md: "", xs: "80%"}}}>
-                <Grid item md={4} xs={12} sx={{ padding: "0% 2%", display: "flex", flexDirection: "column", justifyContent: "space-around",}}>
+                <Grid item md={4} xs={12} sx={{ padding: "0 4.9%", display: "flex", flexDirection: "column", justifyContent: "space-around",}}>
                     <Image src="https://res.cloudinary.com/dekbvdqnb/image/upload/v1634901054/Futurelabs-logo_1_udit2z.png" width="150" height="25" alt="futurelabs" style={{display: mobile ? "none": "block"}}/>
                     <Typography>
                         <strong>Get directions:</strong> <a href="tel:2347080343781" > +234 708 034-3781</a>

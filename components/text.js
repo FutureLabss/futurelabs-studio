@@ -3,7 +3,7 @@ import Link from "next/link"
 
 function Text({ data }) {
     return (
-        <Grid item xs={12} display="flex" flexDirection="column" justifyContent="center" sx={{backgroundColor: data.bg, padding: "0% 2%", position: "absolute", bottom: {md: "0.5rem", xs: "2.5rem"}, left: 0, zIndex: 1}}>
+        <Grid item xs={12} display="flex" flexDirection="column" justifyContent="center" sx={{backgroundColor: data.bg, padding: "0 4.9%", position: "absolute", bottom: {md: "0.5rem", xs: "2.5rem"}, left: 0, zIndex: 1}}>
         <Typography variant="h4" color="secondary" sx={{fontStyle: "normal", fontWeight: 700, lineHeight: "120%", letterSpacing: 3.0}}>
           {data.text1}
         </Typography>
