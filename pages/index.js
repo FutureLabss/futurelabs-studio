@@ -1,5 +1,4 @@
 import DefaultLayout from "../layout";
-import { Box } from "@mui/material";
 import HalfPage from "../components/halfPage"
 import FullPage from "../components/fullPage";
 
