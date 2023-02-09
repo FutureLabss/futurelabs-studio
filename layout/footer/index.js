@@ -82,16 +82,16 @@ function Footer() {
                 </Grid>
                 <Grid item md={4} display="flex" flexDirection="column" justifyContent="space-around" alignItems="center" sx={{padding: {md: "", xs: "0% 2%"}}}>
                     <Typography variant="h5" sx={{fontWeight: 700}}>Company</Typography>
-                    <Link href="">
+                    <Link href="/">
                         <Typography sx={{fontWeight: 600}}>HOME</Typography>
                     </Link> 
-                    <Link href="">
+                    <Link href="/about">
                         <Typography sx={{fontWeight: 600}}>ABOUT</Typography>
                     </Link> 
-                    <Link href="">
+                    <Link href="/services">
                         <Typography sx={{fontWeight: 600}}>SERVICES</Typography>
                     </Link> 
-                    <Link href="">
+                    <Link href="/">
                         <Typography sx={{fontWeight: 600}}>BLOG</Typography>
                     </Link> 
                 </Grid>
