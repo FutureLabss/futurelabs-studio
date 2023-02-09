@@ -42,7 +42,7 @@ function Footer() {
     useEffect(() => {setDate(new Date().getFullYear())}, [])
   return (
     <Box sx={{ height: "100vh" }}>
-        <Stack className="slide-container" sx={{height: "70%", display: "flex", justifyContent: "center", paddingTop: "2rem"}}>
+        <Stack className="slide-container" sx={{height: "70%", display: {md: "flex", xs: "none"} , justifyContent: "center", paddingTop: "2rem"}}>
             <Slide arrows={false} slidesToShow={mobile ? 1 : 3}>
                 {
                     data.map((item, index) => (
@@ -58,10 +58,10 @@ function Footer() {
                 }
             </Slide>
         </Stack>
-        <Stack sx={{height: "30%", display: "flex", justifyContent: "space-between",}}>
-            <Grid container sx={{}}>
-                <Grid item md={4} sx={{ padding: "0% 2%", display: "flex", flexDirection: "column", justifyContent: "space-between",}}>
-                    <Image src="https://res.cloudinary.com/dekbvdqnb/image/upload/v1634901054/Futurelabs-logo_1_udit2z.png" width="150" height="25" alt="futurelabs" />
+        <Stack sx={{height: {md: "30%", xs: "100%"}, display: "flex",  justifyContent: {md: "space-between", xs: "flex-end"}}}>
+            <Grid container sx={{height: {md: "", xs: "80%"}}}>
+                <Grid item md={4} xs={12} sx={{ padding: "0% 2%", display: "flex", flexDirection: "column", justifyContent: "space-around",}}>
+                    <Image src="https://res.cloudinary.com/dekbvdqnb/image/upload/v1634901054/Futurelabs-logo_1_udit2z.png" width="150" height="25" alt="futurelabs" style={{display: mobile ? "none": "block"}}/>
                     <Typography>
                         <strong>Get directions:</strong> <a href="tel:2347080343781" > +234 708 034-3781</a>
                     </Typography>
@@ -73,14 +73,14 @@ function Footer() {
                             <TwitterIcon />
                         </Link>
                         <Link href="">
-                            <LinkedInIcon />
+                            <LinkedInIcon sx={{marginLeft: "0.7rem" }}/>
                         </Link>
                         <Link href="">
-                            <FacebookIcon />
+                            <FacebookIcon sx={{marginLeft: "0.7rem" }}/>
                         </Link>
                     </Stack>
                 </Grid>
-                <Grid item md={4} display="flex" flexDirection="column" justifyContent="space-between" alignItems="center" sx={{display: {md: "flex", xs: "none"}}} >
+                <Grid item md={4} display="flex" flexDirection="column" justifyContent="space-around" alignItems="center" sx={{padding: {md: "", xs: "0% 2%"}}}>
                     <Typography variant="h5" sx={{fontWeight: 700}}>Company</Typography>
                     <Link href="">
                         <Typography sx={{fontWeight: 600}}>HOME</Typography>
@@ -95,12 +95,12 @@ function Footer() {
                         <Typography sx={{fontWeight: 600}}>BLOG</Typography>
                     </Link> 
                 </Grid>
-                <Grid item md={4} sx={{ padding: "0% 2%",}} display="flex" flexDirection="column" justifyContent="space-between" >
+                <Grid item md={4} xs={12} sx={{ padding: "0% 2%",}} display="flex" flexDirection="column" justifyContent="space-around" >
                     <Typography variant="h5" sx={{fontWeight: 700}}>Let&apos;s Get in Touch</Typography>
-                    <Typography variant="p">Sign up to receive our newsletter on industry trends</Typography>
+                    <Typography variant="caption">Sign up to receive our newsletter on industry trends</Typography>
                     <Stack sx={{display: "flex", flexDirection: "row"}}>
-                        <TextField id="outlined-basic" label="Enter email here..." variant="outlined" />
-                        <Button variant="contained" sx={{color: "white"}}>Send</Button>
+                        <TextField size="small" id="outlined-basic" label="Enter email here..." variant="outlined" />
+                        <Button variant="contained" size="small" sx={{color: "white"}}>Send</Button>
                     </Stack>
                 </Grid>
             </Grid>
