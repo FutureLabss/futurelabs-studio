@@ -56,9 +56,7 @@ function ServicesPage() {
         {
           data.map((item, index) => {
               return (
-                <Box  key={index} sx={{}}>
-                  <FullPage video={item}/>
-                </Box>
+                  <FullPage key={index} video={item}/>
                 )
           })
         }
