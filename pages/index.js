@@ -52,7 +52,7 @@ const data = [
   },
 ]
 
-function HomePage() {
+function HomePage() {    
   return (
     <DefaultLayout>
       <FullPage video={videos[0]} />
