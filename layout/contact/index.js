@@ -3,8 +3,8 @@ import {Box, Stack, Typography, TextField, InputLabel, Input, Button, Grid} from
 
 function Contact() {
   return (
-    <Box sx={{height: "100vh", display: "flex", flexDirection: "column", justifyContent: "center", padding: "0 2%"}}>
-            <Typography variant="h4" sx={{textAlign: "center", fontWeight: 700, fontSize: "32px",}}>Contact Us</Typography>
+    <Box sx={{height: "100vh", display: "flex", flexDirection: "column", justifyContent: "center", padding: "0 4.9%"}}>
+            <Typography variant="large" sx={{textAlign: "center", fontWeight: 700, }}>Contact Us</Typography>
         <Grid container sx={{ height: "70%"}}>
             <Grid item md={6} display="flex" flexDirection="column" justifyContent="space-between">
                 <Stack>
@@ -36,7 +36,7 @@ function Contact() {
                         sx={{width: "20rem"}}
                     />
                 </Stack>
-                <Button variant="contained" sx={{width: "10rem", marginTop: "10px", color: "white"}}>Submit</Button>
+                <Button variant="contained" sx={{width: "10rem", marginTop: {md: "10px", xs: "20px"}, color: "white"}}>Submit</Button>
             </Grid>
         </Grid>
     </Box>

@@ -20,14 +20,14 @@ function HalfPage({ data }) {
                     <Text data={data}/>                
                   </Box>
                 ):(
-                  <Grid item xs={12} display="flex" flexDirection="column" justifyContent="center" sx={{backgroundColor: data.bg, padding: "0% 2%",}}>
+                  <Grid item xs={12} display="flex" flexDirection="column" justifyContent="center" sx={{backgroundColor: data.bg, padding: "0 4.9%",}}>
                     <Typography variant="h4" color="secondary" sx={{fontStyle: "normal", fontWeight: 700,  lineHeight: "120%", letterSpacing: 3.0}}>
                       {data.text1}
                     </Typography>
                     <Typography variant="large" color="secondary" sx={{fontStyle: "normal", fontWeight: 700, lineHeight: "120%"}}>
                       {data.text2}
                     </Typography>
-                    <Typography variant="h5" color="secondary" sx={{fontStyle: "normal", fontWeight: 400, lineHeight: "150%"}}>
+                    <Typography variant="h6" color="secondary" sx={{fontStyle: "normal", fontWeight: 400, lineHeight: "150%"}}>
                       {data.text3}
                     </Typography>
                     {
@@ -45,7 +45,7 @@ function HalfPage({ data }) {
               </>
             ): (
               <>
-                <Grid item md={6} xs={6} display="flex" flexDirection="column" justifyContent="center" sx={{padding: "0 2%",}}>
+                <Grid item md={6} xs={6} display="flex" flexDirection="column" justifyContent="center" sx={{padding: "0 4.9%",}}>
                   <Typography variant="h4" color="primary" sx={{fontStyle: "normal", fontWeight: 700,  lineHeight: "120%", letterSpacing: 3.0}}>
                     {data.text1}
                   </Typography>
