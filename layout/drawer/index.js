@@ -19,7 +19,7 @@ const routes = [
 ]
 
 
-function DisplayDrawer(props) {
+function DisplayDrawer({close}) {
 
   return (
     <>      
@@ -32,7 +32,7 @@ function DisplayDrawer(props) {
               </ListItemIcon>
             </ListItem>
           </Link>
-          <ListItem sx={{ display: "flex", flexDirection: "row", justifyContent: "flex-end"}}>
+          <ListItem sx={{ display: "flex", flexDirection: "row", justifyContent: "flex-end"}} onClick={close}>
               <CloseIcon />
           </ListItem>
         </Box>
@@ -53,7 +53,7 @@ function DisplayDrawer(props) {
 export default function DefaultDrawer(props) {
   return (
     <Drawer variant="temporary" anchor="right" open={props.open} onClose={props.close}>
-      <DisplayDrawer />
+      <DisplayDrawer close={props.close}/>
     </Drawer>
   );
 }
