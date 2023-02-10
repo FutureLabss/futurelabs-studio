@@ -15,8 +15,7 @@ const videos = [
     {
         link: "https://res.cloudinary.com/unlimitedreactive/video/upload/v1669906852/about_4_oakopa.mp4",
         text1: "THE BEST FUTURE IMAGINABLE",
-        text2: "",
-        text3: "We draw from our deep skillsets across multiple domains to build the best future imaginable",
+        text2: "We draw from our deep skillsets across multiple domains to build the best future imaginable",
         poster: "/images/about_4.webp",
         button: "",
         showAudio: false,
@@ -24,8 +23,7 @@ const videos = [
     {
         link: "https://res.cloudinary.com/unlimitedreactive/video/upload/v1669907205/about_underscore_7_cfhk5q.mp4",
         text1: "DREAM BIG",
-        text2: "",
-        text3: "The future was created by men who dared to dream it better than they met it.",
+        text2: "The future was created by men who dared to dream it better than they met it.",
         poster: "/images/about_7.jpg",
         button: "",
         showAudio: false,
