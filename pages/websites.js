@@ -7,7 +7,7 @@ const videos = [
   {
     link: "https://res.cloudinary.com/unlimitedreactive/video/upload/v1671625335/website_compilation_1_ekvtpf.mp4",
     text1: "Websites",
-    text3: "The heart of the internet, a creative website sets the tone for the impactful branding and marketing of your product and services",
+    text2: "The heart of the internet, a creative website sets the tone for the impactful branding and marketing of your product and services",
     poster: "/images/websites_1.webp",
     button: "",
     showAudio: true,
@@ -15,7 +15,7 @@ const videos = [
   {
     link: "https://res.cloudinary.com/unlimitedreactive/video/upload/v1671625335/website_compilation_1_ekvtpf.mp4",
     text1: "Around",
-    text3: "TAn extraordinary noise-canceling experience requires an extraordinary website",
+    text2: "TAn extraordinary noise-canceling experience requires an extraordinary website",
     poster: "/images/websites_1.webp",
     button: "",
     showAudio: true,
@@ -23,7 +23,7 @@ const videos = [
   {
     link: "https://res.cloudinary.com/unlimitedreactive/video/upload/v1671625337/VID_20220316_175006_638_a4uhed.mp4",
     text1: "Emmy Chris",
-    text3: "We partnered with Minister EmmyChris to bring the gospel closer to worshippers",
+    text2: "We partnered with Minister EmmyChris to bring the gospel closer to worshippers",
     poster: "/images/websites_2.webp",
     button: "",
     showAudio: true,
@@ -31,7 +31,7 @@ const videos = [
   {
     link: "https://res.cloudinary.com/unlimitedreactive/video/upload/v1671625336/final_future_ride_2_vhgl9g.mp4",
     text1: "Transcend",
-    text3: "Reimagining the future of transportation in Akwa Ibom",
+    text2: "Reimagining the future of transportation in Akwa Ibom",
     poster: "/images/websites_4.webp",
     button: "",
     showAudio: true,
