@@ -33,7 +33,7 @@ function DisplayDrawer({close}) {
             </ListItem>
           </Link>
           <ListItem sx={{ display: "flex", flexDirection: "row", justifyContent: "flex-end"}} onClick={close}>
-              <CloseIcon />
+              <CloseIcon sx={{cursor: "pointer"}}/>
           </ListItem>
         </Box>
         {/* <Divider sx={{my:2}} /> */}
