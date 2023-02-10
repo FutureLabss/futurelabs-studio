@@ -3,29 +3,29 @@ import {Box, Stack, Typography, TextField, InputLabel, Input, Button, Grid} from
 
 function Contact() {
   return (
-    <Box sx={{height: "100vh", display: "flex", flexDirection: "column", justifyContent: "center", padding: "0 4.9%"}}>
-            <Typography variant="large" sx={{textAlign: "center", fontWeight: 700, }}>Contact Us</Typography>
-        <Grid container sx={{ height: "70%"}}>
+    <Box sx={{height: "100vh", display: "flex", flexDirection: "column", justifyContent: "center", padding: "4% 4.9%"}}>
+            <Typography variant="large"  sx={{textAlign: "center", fontWeight: 700, }}>Contact Us</Typography>
+        <Grid container my={2} sx={{ height: "70%"}}>
             <Grid item md={6} display="flex" flexDirection="column" justifyContent="space-between">
-                <Stack>
+                <Stack sx={{marginTop: {md: "10px", xs: "20px"}}}>
                     <InputLabel htmlFor="name" sx={{ fontWeight: 700, fontSize: "18px",}}>My name is</InputLabel>
                     <Input sx={{width: "20rem"}} id="name" placeholder="Your name" />
                 </Stack>  
-                <Stack>
+                <Stack sx={{marginTop: {md: "10px", xs: "20px"}}}>
                     <InputLabel htmlFor="phonenumber" sx={{ fontWeight: 700, fontSize: "18px",}}>My phone number is</InputLabel>
                     <Input sx={{width: "20rem"}} id="phonenumber" placeholder="Your phone number" />
                 </Stack> 
-                <Stack>
+                <Stack sx={{marginTop: {md: "10px", xs: "20px"}}}>
                     <InputLabel htmlFor="company" sx={{ fontWeight: 700, fontSize: "18px",}}>I work at</InputLabel>
                     <Input sx={{width: "20rem"}} id="company" placeholder="Your company" />
                 </Stack> 
-                <Stack>
+                <Stack sx={{marginTop: {md: "10px", xs: "20px"}}}>
                     <InputLabel htmlFor="email" sx={{ fontWeight: 700, fontSize: "18px",}}>Reach me at</InputLabel>
                     <Input sx={{width: "20rem"}} id="email" placeholder="Your@email.com" />
                 </Stack>     
             </Grid>
             <Grid item md={6} display="flex" flexDirection="column">
-                <Stack>
+                <Stack sx={{marginTop: {md: "10px", xs: "20px"}}}>
                     <InputLabel htmlFor="message" sx={{ fontWeight: 700, fontSize: "18px",}}>Message</InputLabel>
                     <TextField
                         id="message"
