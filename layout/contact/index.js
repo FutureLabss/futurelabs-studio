@@ -3,7 +3,7 @@ import {Box, Stack, Typography, TextField, InputLabel, Input, Button, Grid} from
 
 function Contact() {
   return (
-    <Box sx={{height: "100vh", display: "flex", flexDirection: "column", justifyContent: "center", padding: "4% 4.9%"}}>
+    <Box sx={{height: "100vh", display: "flex", flexDirection: "column", justifyContent: "center", padding: "4% 4.6%"}}>
             <Typography variant="large"  sx={{textAlign: "center", fontWeight: 700, }}>Contact Us</Typography>
         <Grid container my={2} sx={{ height: "70%"}}>
             <Grid item md={6} display="flex" flexDirection="column" justifyContent="space-between">
