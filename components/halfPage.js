@@ -20,7 +20,7 @@ function HalfPage({ data }) {
                     <Text data={data}/>                
                   </Box>
                 ):(
-                  <Grid item xs={12} display="flex" flexDirection="column" justifyContent="center" sx={{backgroundColor: data.bg, padding: "0 4.9%",}}>
+                  <Grid item xs={12} display="flex" flexDirection="column" justifyContent="center" sx={{backgroundColor: data.bg, padding: "0 4.6%",}}>
                     <Typography variant="h4" color="secondary" sx={{fontStyle: "normal", fontWeight: 700,  lineHeight: "120%", letterSpacing: 3.0}}>
                       {data.text1}
                     </Typography>
@@ -45,7 +45,7 @@ function HalfPage({ data }) {
               </>
             ): (
               <>
-                <Grid item md={6} xs={6} display="flex" flexDirection="column" justifyContent="center" sx={{padding: "0 4.9%",}}>
+                <Grid item md={6} xs={6} display="flex" flexDirection="column" justifyContent="center" sx={{padding: "0 4.6%",}}>
                   <Typography variant="h4" color="primary" sx={{fontStyle: "normal", fontWeight: 700,  lineHeight: "120%", letterSpacing: 3.0}}>
                     {data.text1}
                   </Typography>
