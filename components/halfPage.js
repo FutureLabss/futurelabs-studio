@@ -27,7 +27,7 @@ function HalfPage({ data }) {
                     <Typography variant="large" color="secondary" sx={{fontStyle: "normal", fontWeight: 700, }}>
                       {data.text2}
                     </Typography>
-                    <Typography variant="h6" color="secondary" sx={{fontStyle: "normal", fontWeight: 400, lineHeight: "150%"}}>
+                    <Typography variant="h6" color="secondary" sx={{fontStyle: "normal", fontWeight: "normal", lineHeight: "150%"}}>
                       {data.text3}
                     </Typography>
                     {
@@ -49,10 +49,10 @@ function HalfPage({ data }) {
                   <Typography variant="h4" color="primary" sx={{fontStyle: "normal", fontWeight: 700,  lineHeight: "120%", letterSpacing: 3.0}}>
                     {data.text1}
                   </Typography>
-                  <Typography variant="large" sx={{fontStyle: "normal", fontWeight: 900, lineHeight: "120%"}}>
+                  <Typography variant="large" sx={{fontStyle: "normal", fontWeight: 700, lineHeight: "120%"}}>
                     {data.text2}
                   </Typography>
-                  <Typography variant="h6">
+                  <Typography variant="h6" sx={{fontWeight: "normal",}}>
                     {data.text3}
                   </Typography>
                   {
