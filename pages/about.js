@@ -5,7 +5,7 @@ import HalfPage from "../components/halfPage";
 const videos = [
     {
         link: "https://res.cloudinary.com/unlimitedreactive/video/upload/v1669905979/About_Hero_Video_kuskdy.mp4",
-        text1: "WE ARE FUTURISTS!",
+        text1: "WE ARE FUTURISTS !",
         text2: "",
         text3: "",
         poster: "/images/about_3.jpg",
@@ -33,7 +33,7 @@ const videos = [
 const data = [
   {
     text1: "",
-    text2: "WE ARE FUTURELABS!",
+    text2: "WE ARE FUTURISTS !",
     text3: "We will help you plan for the future with extraordinary foresight, You can either grow exponentially as the android OS or go extinct like blackberry",
     link: "https://res.cloudinary.com/unlimitedreactive/video/upload/v1669906508/Comp_1_1_ixmb3j.mp4",
     bg: "",
@@ -43,7 +43,7 @@ const data = [
   },
   {
     text1: "",
-    text2: "THE BEST FUTURE IMAGINABLE",
+    text2: "BUSINESS SOLUTIONS",
     text3: "We combine a p2p and deep learning model to deliver impactful business solutions",
     link: "https://res.cloudinary.com/unlimitedreactive/video/upload/v1669906737/Comp_1_1_z63wwg.mp4",
     bg: "",

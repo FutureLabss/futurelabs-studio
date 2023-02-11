@@ -19,10 +19,10 @@ function FullPage({ video }) {
             <Typography variant="large" color="secondary" sx={{fontStyle: "normal", fontWeight: 700, lineHeight: "120%"}}>
               {video.text1}
             </Typography>
-            <Typography variant="h6" color="secondary.gray" sx={{fontStyle: "normal", fontWeight: 400, lineHeight: "150%"}}>
+            <Typography variant="h6" color="secondary.gray" sx={{fontStyle: "normal", fontWeight: "normal", lineHeight: "150%"}}>
               {video.text2}
             </Typography>
-            <Typography variant="h6" color="secondary" >
+            <Typography variant="h6" color="secondary" sx={{fontWeight: "normal",}} >
               {video.text3}
             </Typography>
           </Stack>
