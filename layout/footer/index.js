@@ -59,7 +59,7 @@ function Footer() {
             </Slide>
         </Stack>
         <Stack sx={{height: {md: "30%", xs: "100%"}, display: "flex",  justifyContent: {md: "space-between", xs: "flex-end"}}}>
-            <Grid container sx={{height: {md: "", xs: "80%"}}}>
+            <Grid container sx={{height: {md: "75%", xs: "80%"},}}>
                 <Grid item md={4} xs={12} sx={{ padding: "0 4.9%", display: "flex", flexDirection: "column", justifyContent: "space-around",}}>
                     <Image src="https://res.cloudinary.com/dekbvdqnb/image/upload/v1634901054/Futurelabs-logo_1_udit2z.png" width="150" height="25" alt="futurelabs" style={{display: mobile ? "none": "block"}}/>
                     <Typography>
@@ -80,20 +80,20 @@ function Footer() {
                         </Link>
                     </Stack>
                 </Grid>
-                <Grid item md={4} display="flex" flexDirection="column" justifyContent="space-around" alignItems="center" sx={{padding: {md: "", xs: "0% 2%"}}}>
+                <Grid item md={4} display="flex" flexDirection="column" justifyContent="space-around" sx={{padding: {md: "0% 13%", xs: "0% 2%"},}}>
                     <Typography variant="h5" sx={{fontWeight: 700}}>Company</Typography>
-                    <Link href="/">
-                        <Typography sx={{fontWeight: 600}}>HOME</Typography>
-                    </Link> 
-                    <Link href="/about">
-                        <Typography sx={{fontWeight: 600}}>ABOUT</Typography>
-                    </Link> 
-                    <Link href="/services">
-                        <Typography sx={{fontWeight: 600}}>SERVICES</Typography>
-                    </Link> 
-                    <Link href="/">
-                        <Typography sx={{fontWeight: 600}}>BLOG</Typography>
-                    </Link> 
+                        <Link href="/">
+                            <Typography sx={{fontWeight: 100}}>HOME</Typography>
+                        </Link> 
+                        <Link href="/about">
+                            <Typography sx={{fontWeight: 100}}>ABOUT</Typography>
+                        </Link> 
+                        <Link href="/services">
+                            <Typography sx={{fontWeight: 100}}>SERVICES</Typography>
+                        </Link> 
+                        <Link href="/">
+                            <Typography sx={{fontWeight: 100}}>BLOG</Typography>
+                        </Link> 
                 </Grid>
                 <Grid item md={4} xs={12} sx={{ padding: "0% 2%",}} display="flex" flexDirection="column" justifyContent="space-around" >
                     <Typography variant="h5" sx={{fontWeight: 700}}>Let&apos;s Get in Touch</Typography>
