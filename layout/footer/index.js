@@ -69,13 +69,13 @@ function Footer() {
                         <strong>Quick response:</strong> <a href="mailto:info@futurelabs.com.ng"> info@futurelabs.com.ng</a>
                     </Typography>
                     <Stack sx={{display: "flex", flexDirection: "row",}}>
-                        <Link href="">
+                        <Link href="https://twitter.com/FutureLabsNG">
                             <TwitterIcon />
                         </Link>
-                        <Link href="">
+                        <Link href="https://www.linkedin.com/company/future-labs-ng/">
                             <LinkedInIcon sx={{marginLeft: "0.7rem" }}/>
                         </Link>
-                        <Link href="">
+                        <Link href="https://www.facebook.com/FutureLabsNews">
                             <FacebookIcon sx={{marginLeft: "0.7rem" }}/>
                         </Link>
                     </Stack>
