@@ -43,15 +43,15 @@ function Footer() {
   return (
     <Box sx={{ height: "100vh" }}>
         <Stack className="slide-container" sx={{height: "70%", display: {md: "flex", xs: "none"} , justifyContent: "center", paddingTop: "2rem"}}>
-            <Slide arrows={false} slidesToShow={mobile ? 1 : 3}>
+            <Slide arrows={false} slidesToShow={1}>
                 {
                     data.map((item, index) => (
                         <Box className="each-slide" key={index} sx={{ display: "flex", justifyContent: "center"}}>
-                            <Box sx={{display: "flex", flexDirection: "column", alignContent: "center", alignItems: "center", borderRadius: "20px", background: "#fafafa", boxShadow: "20px 20px 60px #d5d5d5, -20px -20px 60px #ffffff", textAlign: "center", width: {md: "250px", xs: "80vw"}, height: {md: "260px", xs: "50vh"}, marginBottom: "20px"}}>
+                            <Box sx={{display: "flex", flexDirection: "column", alignContent: "center", alignItems: "center", borderRadius: "20px", background: "#fafafa", boxShadow: "20px 20px 60px #d5d5d5, -20px -20px 60px #ffffff", textAlign: "center", width: {md: "500px", xs: "80vw"}, height: {md: "260px", xs: "50vh"}, marginBottom: "20px", padding: "2%"}}>
                                 <Image src={item.image} width="50" height="50" style={{borderRadius: "50%"}} alt="client" />
                                 <Typography variant="p" sx={{padding: "20px", textAlign: "justify", fontSize: "12px"}}>{item.testimonial}</Typography>
-                                <Typography variant="p" sx={{marginBottom: {md: "0.1rem", xs: "1rem"}, fontSize: {xs: "12px"}}}>{item.name}</Typography>
-                                <Typography variant="p" sx={{marginBottom: {md: "0.1rem", xs: "1rem"}, fontSize: {xs: "12px"}}}>{item.position}</Typography>
+                                <Typography variant="p" sx={{marginBottom: {md: "0.1rem", xs: "1rem"}, fontSize: {xs: "12px"}, fontWeight: "900"}}>{item.name}</Typography>
+                                <Typography variant="p" sx={{marginBottom: {md: "0.1rem", xs: "1rem"}, fontSize: {xs: "12px"}, fontWeight: "100"}}>{item.position}</Typography>
                             </Box>
                         </Box>
                     ))
@@ -59,7 +59,7 @@ function Footer() {
             </Slide>
         </Stack>
         <Stack sx={{height: {md: "30%", xs: "100%"}, display: "flex",  justifyContent: {md: "space-between", xs: "flex-end"}}}>
-            <Grid container sx={{height: {md: "", xs: "80%"}}}>
+            <Grid container sx={{height: {md: "75%", xs: "80%"},}}>
                 <Grid item md={4} xs={12} sx={{ padding: "0 4.9%", display: "flex", flexDirection: "column", justifyContent: "space-around",}}>
                     <Image src="https://res.cloudinary.com/dekbvdqnb/image/upload/v1634901054/Futurelabs-logo_1_udit2z.png" width="150" height="25" alt="futurelabs" style={{display: mobile ? "none": "block"}}/>
                     <Typography>
@@ -69,31 +69,31 @@ function Footer() {
                         <strong>Quick response:</strong> <a href="mailto:info@futurelabs.com.ng"> info@futurelabs.com.ng</a>
                     </Typography>
                     <Stack sx={{display: "flex", flexDirection: "row",}}>
-                        <Link href="">
+                        <Link href="https://twitter.com/FutureLabsNG">
                             <TwitterIcon />
                         </Link>
-                        <Link href="">
+                        <Link href="https://www.linkedin.com/company/future-labs-ng/">
                             <LinkedInIcon sx={{marginLeft: "0.7rem" }}/>
                         </Link>
-                        <Link href="">
+                        <Link href="https://www.facebook.com/FutureLabsNews">
                             <FacebookIcon sx={{marginLeft: "0.7rem" }}/>
                         </Link>
                     </Stack>
                 </Grid>
-                <Grid item md={4} display="flex" flexDirection="column" justifyContent="space-around" alignItems="center" sx={{padding: {md: "", xs: "0% 2%"}}}>
+                <Grid item md={4} display="flex" flexDirection="column" justifyContent="space-around" sx={{padding: {md: "0% 13%", xs: "0% 2%"},}}>
                     <Typography variant="h5" sx={{fontWeight: 700}}>Company</Typography>
-                    <Link href="/">
-                        <Typography sx={{fontWeight: 600}}>HOME</Typography>
-                    </Link> 
-                    <Link href="/about">
-                        <Typography sx={{fontWeight: 600}}>ABOUT</Typography>
-                    </Link> 
-                    <Link href="/services">
-                        <Typography sx={{fontWeight: 600}}>SERVICES</Typography>
-                    </Link> 
-                    <Link href="/">
-                        <Typography sx={{fontWeight: 600}}>BLOG</Typography>
-                    </Link> 
+                        <Link href="/">
+                            <Typography sx={{fontWeight: 100}}>HOME</Typography>
+                        </Link> 
+                        <Link href="/about">
+                            <Typography sx={{fontWeight: 100}}>ABOUT</Typography>
+                        </Link> 
+                        <Link href="/services">
+                            <Typography sx={{fontWeight: 100}}>SERVICES</Typography>
+                        </Link> 
+                        <Link href="/">
+                            <Typography sx={{fontWeight: 100}}>BLOG</Typography>
+                        </Link> 
                 </Grid>
                 <Grid item md={4} xs={12} sx={{ padding: "0% 2%",}} display="flex" flexDirection="column" justifyContent="space-around" >
                     <Typography variant="h5" sx={{fontWeight: 700}}>Let&apos;s Get in Touch</Typography>
