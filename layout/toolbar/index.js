@@ -10,7 +10,7 @@ import Link from 'next/link'
 export default function DefaultToolbar(props) {
   return (
     <Box sx={{ flexGrow: 1,}} >
-      <AppBar position="fixed">
+      <AppBar position="fixed" sx={{width: {md: "99.1vw", xs: "100vw"}, left: "0",}}>
         <Toolbar>
           <Box sx={{ flexGrow: 1, paddingLeft: {md: "2rem", xs: ""}}}>
            <Link href="/">
