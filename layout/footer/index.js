@@ -80,7 +80,7 @@ function Footer() {
                         </Link>
                     </Stack>
                 </Grid>
-                <Grid item md={4} display="flex" flexDirection="column" justifyContent="space-around" sx={{padding: {md: "0% 13%", xs: "0% 2%"},}}>
+                <Grid item md={4} display="flex" flexDirection="column" justifyContent="space-around" sx={{padding: {md: "0% 13%", xs: "0% 4.9%"},}}>
                     <Typography variant="h5" sx={{fontWeight: 700}}>Company</Typography>
                         <Link href="/">
                             <Typography sx={{fontWeight: 100}}>HOME</Typography>
@@ -95,7 +95,7 @@ function Footer() {
                             <Typography sx={{fontWeight: 100}}>BLOG</Typography>
                         </Link> 
                 </Grid>
-                <Grid item md={4} xs={12} sx={{ padding: "0% 2%",}} display="flex" flexDirection="column" justifyContent="space-around" >
+                <Grid item md={4} xs={12} sx={{ padding: "0% 4.9%",}} display="flex" flexDirection="column" justifyContent="space-around" >
                     <Typography variant="h5" sx={{fontWeight: 700}}>Let&apos;s Get in Touch</Typography>
                     <Typography variant="caption">Sign up to receive our newsletter on industry trends</Typography>
                     <Stack sx={{display: "flex", flexDirection: "row"}}>
