@@ -9,79 +9,81 @@ function HalfPage({ data }) {
   const theme = useTheme();
   const mobile = useMediaQuery(theme.breakpoints.down("md"));
   return (
-        <Grid container direction={data.reverse ? "row-reverse" : "row"} sx={{ minHeight: '100vh',}}>
-          {
-            mobile ? (
-              <>
-              {
-                data.poster ? (
-                  <Box sx={{height: "100vh", position: "relative"}}>
-                    <Video data={data}/>
-                    <Text data={data}/>                
-                  </Box>
-                ):(
-                  <Grid item xs={12} display="flex" flexDirection="column" justifyContent="center" sx={{backgroundColor: data.bg, padding: "0 4.6%",}}>
-                    <Typography variant="h4" color="secondary" sx={{fontStyle: "normal", fontWeight: 700,  lineHeight: "120%", letterSpacing: 3.0}}>
+        <Box component="section">
+          <Grid container direction={data.reverse ? "row-reverse" : "row"} sx={{ minHeight: '100vh',}}>
+            {
+              mobile ? (
+                <>
+                {
+                  data.poster ? (
+                    <Box sx={{height: "100vh", position: "relative"}}>
+                      <Video data={data}/>
+                      <Text data={data}/>                
+                    </Box>
+                  ):(
+                    <Grid item xs={12} display="flex" flexDirection="column" justifyContent="center" sx={{backgroundColor: data.bg, padding: "0 4.6%",}}>
+                      <Typography variant="h4" color="secondary" sx={{fontStyle: "normal", fontWeight: 700,  lineHeight: "120%", letterSpacing: 3.0}}>
+                        {data.text1}
+                      </Typography>
+                      <Typography variant="large" color="secondary" sx={{fontStyle: "normal", fontWeight: 700, }}>
+                        {data.text2}
+                      </Typography>
+                      <Typography variant="h6" color="secondary" sx={{fontStyle: "normal", fontWeight: "normal", lineHeight: "150%"}}>
+                        {data.text3}
+                      </Typography>
+                      {
+                        data.button ? (
+                          <Link href={data.button}>
+                            <Button variant="outlined" sx={{width: "10rem", marginTop: "1rem"}} color={data.buttonColor}>Learn More</Button>
+                          </Link>  
+                          ):(
+                            ""
+                        )
+                      }
+                    </Grid>
+                  )
+                }
+                </>
+              ): (
+                <>
+                  <Grid item md={6} xs={6} display="flex" flexDirection="column" justifyContent="center" sx={{padding: "0 4.6%",}}>
+                    <Typography variant="h4" color="primary" sx={{fontStyle: "normal", fontWeight: 700,  lineHeight: "120%", letterSpacing: 3.0}}>
                       {data.text1}
                     </Typography>
-                    <Typography variant="large" color="secondary" sx={{fontStyle: "normal", fontWeight: 700, }}>
+                    <Typography variant="large" sx={{fontStyle: "normal", fontWeight: 700, lineHeight: "120%"}}>
                       {data.text2}
                     </Typography>
-                    <Typography variant="h6" color="secondary" sx={{fontStyle: "normal", fontWeight: "normal", lineHeight: "150%"}}>
+                    <Typography variant="h6" sx={{fontWeight: "normal",}}>
                       {data.text3}
                     </Typography>
                     {
-                      data.button ? (
-                        <Link href={data.button}>
-                          <Button variant="outlined" sx={{width: "10rem", marginTop: "1rem"}} color={data.buttonColor}>Learn More</Button>
-                        </Link>  
-                        ):(
-                          ""
+                        data.button ? (
+                          <Link href={data.button}>
+                            <Button variant="outlined" sx={{width: "10rem", marginTop: "1rem"}} >Learn More</Button>
+                          </Link>  
+                          ):(
+                            ""
+                        )
+                      }
+                  </Grid>
+                  <Grid item xs={6} md={6} sx={{backgroundColor: data.bg}}>
+                    {
+                      data.poster ? (
+                        <Box sx={{height: "100vh", position: "relative"}}>
+                          <Video data={data}/>
+                        </Box>
+                      ) : (
+                        <Box sx={{height: "100%",display: "flex", justifyContent: "center", alignItems: "center"}}>
+                          <Image src={data.link} height="200" width="200" alt="futurelabs"></Image>
+                        </Box>
                       )
                     }
                   </Grid>
-                )
-              }
-              </>
-            ): (
-              <>
-                <Grid item md={6} xs={6} display="flex" flexDirection="column" justifyContent="center" sx={{padding: "0 4.6%",}}>
-                  <Typography variant="h4" color="primary" sx={{fontStyle: "normal", fontWeight: 700,  lineHeight: "120%", letterSpacing: 3.0}}>
-                    {data.text1}
-                  </Typography>
-                  <Typography variant="large" sx={{fontStyle: "normal", fontWeight: 700, lineHeight: "120%"}}>
-                    {data.text2}
-                  </Typography>
-                  <Typography variant="h6" sx={{fontWeight: "normal",}}>
-                    {data.text3}
-                  </Typography>
-                  {
-                      data.button ? (
-                        <Link href={data.button}>
-                          <Button variant="outlined" sx={{width: "10rem", marginTop: "1rem"}} >Learn More</Button>
-                        </Link>  
-                        ):(
-                          ""
-                      )
-                    }
-                </Grid>
-                <Grid item xs={6} md={6} sx={{backgroundColor: data.bg}}>
-                  {
-                    data.poster ? (
-                      <Box sx={{height: "100vh", position: "relative"}}>
-                        <Video data={data}/>
-                      </Box>
-                    ) : (
-                      <Box sx={{height: "100%",display: "flex", justifyContent: "center", alignItems: "center"}}>
-                        <Image src={data.link} height="200" width="200" alt="futurelabs"></Image>
-                      </Box>
-                    )
-                  }
-                </Grid>
-              </>
-            )
-          }
-          </Grid>
+                </>
+              )
+            }
+            </Grid>
+          </Box>
   )
 }
 

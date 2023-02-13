@@ -41,7 +41,7 @@ function Footer() {
 
     useEffect(() => {setDate(new Date().getFullYear())}, [])
   return (
-    <Box sx={{ height: "100vh" }}>
+    <Box component="section" sx={{ height: "100vh" }}>
         <Stack className="slide-container" sx={{height: "70%", display: {md: "flex", xs: "none"} , justifyContent: "center", paddingTop: "2rem"}}>
             <Slide arrows={false} slidesToShow={1}>
                 {
