@@ -12,11 +12,11 @@ export default function DefaultLayout({ children, ...props }) {
         <>
             <DefaultToolbar toggleDrawer={() => setDrawer(!drawer)} />
             <DefaultDrawer open={drawer} close={() => setDrawer(false)}  />
-            <Container maxWidth={false} disableGutters>
+            <Container className="scroller" maxWidth={false} disableGutters>
               {children}
-            </Container>
             <Contact />
             <DefaultFooter />
+            </Container>
         </>
   )
 }
