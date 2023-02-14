@@ -1,7 +1,10 @@
-import {Box, Stack, Typography, TextField, InputLabel, Input, Button, Grid} from '@mui/material'
+import {Box, Stack, Typography, TextField, InputLabel, Input, Button, Grid, useMediaQuery} from '@mui/material'
+import { useTheme } from "@emotion/react";
 
 
 function Contact() {
+  const theme = useTheme();
+  const mobile = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <Box component="section" sx={{height: "100vh", display: "flex", flexDirection: "column", justifyContent: "center", padding: "4% 4.6%"}}>
             <Typography variant="large"  sx={{textAlign: "center", fontWeight: 700, }}>Contact Us</Typography>
@@ -30,7 +33,7 @@ function Contact() {
                     <TextField
                         id="message"
                         multiline
-                        rows={4}
+                        rows={mobile ? 3 : 9}
                         placeholder="Start typing here..."
                         variant="standard"
                         sx={{width: "20rem"}}

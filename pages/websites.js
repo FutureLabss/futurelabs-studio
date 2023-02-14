@@ -7,15 +7,15 @@ const videos = [
   {
     link: "https://res.cloudinary.com/unlimitedreactive/video/upload/v1671625335/website_compilation_1_ekvtpf.mp4",
     text1: "Websites",
-    text2: "The heart of the internet, a creative website sets the tone for the impactful branding and marketing of your product and services",
+    text2: "Websites are the heart of the internet, an engaging website sets the tone for your branding and global marketing outcomes",
     poster: "/images/websites_1.webp",
     button: "",
     showAudio: true,
   },
   {
-    link: "https://res.cloudinary.com/unlimitedreactive/video/upload/v1671625335/website_compilation_1_ekvtpf.mp4",
+    link: "https://res.cloudinary.com/not-set/video/upload/v1640267570/around_main_comp_d1x979.mp4",
     text1: "Around",
-    text2: "TAn extraordinary noise-canceling experience requires an extraordinary website",
+    text2: "The extraordinary noise-canceling experience requires an extraordinary website",
     poster: "/images/websites_1.webp",
     button: "",
     showAudio: true,

@@ -5,8 +5,8 @@ import FullPage from "../components/fullPage";
 const videos = [
   {
     link: "https://res.cloudinary.com/dps0unrwm/video/upload/v1657903348/Futurelabs/2D_Animation_olttrg.mp4",
-    text2: "Art bridges the gulf between dreams and reality",
-    text3: "",
+    text1: "2D Arts",
+    text2: "Art bridges the gulf between our dreams and reality",
     poster: "/images/digital3.jpg",
     button: "",
     showAudio: true,

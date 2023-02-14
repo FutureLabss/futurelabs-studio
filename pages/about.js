@@ -5,7 +5,7 @@ import HalfPage from "../components/halfPage";
 const videos = [
     {
         link: "https://res.cloudinary.com/unlimitedreactive/video/upload/v1669905979/About_Hero_Video_kuskdy.mp4",
-        text1: "WE ARE FUTURISTS !",
+        text1: "",
         text2: "",
         text3: "",
         poster: "/images/about_3.jpg",

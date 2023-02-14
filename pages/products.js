@@ -5,14 +5,15 @@ import FullPage from "../components/fullPage";
 const videos = [
   {
     link: "https://res.cloudinary.com/unlimitedreactive/video/upload/v1671627711/Products_compilation_zmpmzx.mp4",
-    text2: "Your product is your strategy and design thinking determines your success or failure ",
+    text2: "Your product is your strategy and good design doesn’t just look and feel good, it works",
     poster: "/images/homeImage1.jpg",
     button: "",
     showAudio: true,
   },
   {
     link: "https://res.cloudinary.com/usenmfon/video/upload/v1651836353/FutureLabs/Rude_Ui_animation_kil6nt.mp4",
-    text2: "Hail a bike ride with ease",
+    text1: "Hail App",
+    text2: "Hail a bike with ease",
     poster: "/images/product_1.webp",
     button: "",
     showAudio: true,
@@ -27,8 +28,8 @@ const videos = [
   },
   {
     link: "https://res.cloudinary.com/usenmfon/video/upload/v1653400836/FutureLabs/Money_nudfwv.mp4",
-    text1: "Make Faster & Secure Payments",
-    text2: "",
+    text1: "Money App",
+    text2: "Make Faster and Secure Payments",
     poster: "/images/product_3.webp",
     button: "",
     showAudio: true,

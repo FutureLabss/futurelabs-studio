@@ -7,7 +7,7 @@ const videos = [
   {
     link: "https://res.cloudinary.com/eacademy/video/upload/v1643989706/Agency/Strategy.mp4",
     text1: "Vision & Growth",
-    text2: "Vision propels growth, we help startups scale by asking the right question; why? ",
+    text2: "Vision propels growth, we help startups scale by asking the right question, why? ",
     poster: "/images/strategy_1.webp",
     button: "",
     showAudio: true,

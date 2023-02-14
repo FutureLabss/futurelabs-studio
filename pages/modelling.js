@@ -8,7 +8,7 @@ function ModellingPage() {
     {
       link: "https://res.cloudinary.com/usenmfon/video/upload/v1650975960/FutureLabs/All_3D_video_bxracl.mp4",
       text1: "A Better future",
-      text2: "With the power of 3D Art, all we do is imagine and recreate a better future for all",
+      text2: "Reimagine reality without the physical constraints",
       poster: "/images/modelling_1.webp",
       button: "",
       showAudio: true,

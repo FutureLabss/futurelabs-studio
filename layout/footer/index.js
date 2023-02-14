@@ -1,5 +1,6 @@
 import { useState, useEffect} from 'react'
-import { Box, Stack, Grid, Typography, TextField, Button, useMediaQuery } from  '@mui/material'
+import { Box, Stack, Grid, Typography, TextField, Button, useMediaQuery, Input } from  '@mui/material'
+import { styled } from '@mui/material/styles'
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import FacebookIcon from '@mui/icons-material/Facebook';
@@ -38,6 +39,15 @@ function Footer() {
     const [data] = useState(testimonial);
     const theme = useTheme();
     const mobile = useMediaQuery(theme.breakpoints.down("md"));
+
+    const SubscribeButton = styled(TextField)({
+        '& .MuiOutlinedInput-root': {
+            '& fieldset': {
+              borderTopRightRadius: '0',
+              borderBottomRightRadius: '0'
+            },
+        },   
+    })
 
     useEffect(() => {setDate(new Date().getFullYear())}, [])
   return (
@@ -99,8 +109,8 @@ function Footer() {
                     <Typography variant="h5" sx={{fontWeight: 700}}>Let&apos;s Get in Touch</Typography>
                     <Typography variant="caption">Sign up to receive our newsletter on industry trends</Typography>
                     <Stack sx={{display: "flex", flexDirection: "row"}}>
-                        <TextField size="small" id="outlined-basic" label="Enter email here..." variant="outlined" />
-                        <Button variant="contained" size="small" sx={{color: "white"}}>Send</Button>
+                        <SubscribeButton size="small"  id="outlined-basic" label="Enter email here..." variant="outlined" sx={{borderTopRightRadius: "0", borderBottomRightRadius: "0"}} />
+                        <Button variant="contained" size="small" sx={{color: "white", borderTopLeftRadius: "0", borderBottomLeftRadius: "0"}}>Send</Button>
                     </Stack>
                 </Grid>
             </Grid>

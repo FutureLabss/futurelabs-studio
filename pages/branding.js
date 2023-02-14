@@ -6,7 +6,7 @@ const videos = [
   {
     link: "https://res.cloudinary.com/usenmfon/video/upload/v1650284804/FutureLabs/Final_Branding_Video_faix3v.mp4",
     text1: "Branding & Advertising",
-    text2: "Brand visibility is one of our core values ",
+    text2: "Proper branding builds brand authority and customer loyalty",
     poster: "/images/branding_1.webp",
     button: "",
     showAudio: true,
