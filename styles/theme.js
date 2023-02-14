@@ -1,7 +1,7 @@
 import { createTheme } from "@mui/material/styles";
 
 const typographyList = {
-    large:{xs:"39px", sm:"39px", md:"2.2vw"},
+    large:{xs:"39px", sm:"39px", md:"2.05vw"},
     h1: {xs:"39px", sm:"39px", md:"4.05vw"}, //fontsize 70 
     h2: {xs:"23px", sm:"33px", md:"3.47vw"}, //fontsize 60 
     h3: {xs:"21px", sm:"28px", md:"2.89vw"}, //fontsize 50 
