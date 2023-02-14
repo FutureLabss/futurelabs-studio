@@ -9,6 +9,7 @@ const videos = [
     text2: "We transform ideas into phenomenal products for outliers",
     poster: "/images/homeImage1.jpg",
     button: "/services",
+    buttonText: "View our services",
     showAudio: false,
   },
   {
@@ -17,6 +18,7 @@ const videos = [
     text2: "In God we trust, others must bring data, we take our time sifting through data and building models.",
     poster: "/images/homeImage2.webp",
     button: "",
+    buttonText: "Learn More",
     showAudio: true,
   },
   {
@@ -25,18 +27,20 @@ const videos = [
     text2: "Securing Payments For Tomorrow on the Web",
     poster: "/images/homeImage3.webp",
     button: "",
+    buttonText: "Learn More",
     showAudio: true,
   },
 ]
 
 const data = [
   {
-    text1: " WE ARE FUTURELABS !",
+    text1: "",
     text2: "We are A digital agency With global footprints.",
     text3: "Giving Users the best experience while turning ideas into impactful solutions one happy client per time.",
     link: "https://res.cloudinary.com/dremo/image/upload/v1638808890/Futurelabs-logo_2_sgxejz.svg",
     bg: "#FF9000",
     button: "/about",
+    buttonText: "About Futurelabs",
     reverse: false,
     buttonColor: "secondary"
   },
@@ -47,6 +51,7 @@ const data = [
     link: "https://res.cloudinary.com/usenmfon/video/upload/v1655290725/FutureLabs/Comp_1_1_rr5xub.mp4",
     bg: "",
     button: "/strategy",
+    buttonText: "Vision & Strategy",
     poster: "/images/about_2.webp",
     reverse: true,
   },

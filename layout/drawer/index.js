@@ -9,10 +9,10 @@ import Image from 'next/image'
 const routes = [
   { path: '/about', title: 'About Us' },
   { path: '/services', title: 'Services' },
+  { path: '/websites', title: 'Websites' },
   { path: '/products', title: 'Products' },
   { path: '/modelling', title: 'Modelling' },
   { path: '/strategy', title: 'Strategy' },
-  { path: '/websites', title: 'Websites' },
   { path: '/branding', title: 'Branding' },
   { path: '/digitalart', title: 'Digital Arts & NFTs' },
   { path: '/contact', title: 'Contact Us' },

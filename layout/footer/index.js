@@ -1,5 +1,6 @@
 import { useState, useEffect} from 'react'
-import { Box, Stack, Grid, Typography, TextField, Button, useMediaQuery } from  '@mui/material'
+import { Box, Stack, Grid, Typography, TextField, Button, useMediaQuery, Input } from  '@mui/material'
+import { styled } from '@mui/material/styles'
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import FacebookIcon from '@mui/icons-material/Facebook';
@@ -39,6 +40,15 @@ function Footer() {
     const theme = useTheme();
     const mobile = useMediaQuery(theme.breakpoints.down("md"));
 
+    const SubscribeButton = styled(TextField)({
+        '& .MuiOutlinedInput-root': {
+            '& fieldset': {
+              borderTopRightRadius: '0',
+              borderBottomRightRadius: '0'
+            },
+        },   
+    })
+
     useEffect(() => {setDate(new Date().getFullYear())}, [])
   return (
     <Box component="section" sx={{ height: "100vh" }}>
@@ -47,11 +57,11 @@ function Footer() {
                 {
                     data.map((item, index) => (
                         <Box className="each-slide" key={index} sx={{ display: "flex", justifyContent: "center"}}>
-                            <Box sx={{display: "flex", flexDirection: "column", alignContent: "center", alignItems: "center", borderRadius: "20px", background: "#fafafa", boxShadow: "20px 20px 60px #d5d5d5, -20px -20px 60px #ffffff", textAlign: "center", width: {md: "500px", xs: "80vw"}, height: {md: "260px", xs: "50vh"}, marginBottom: "20px", padding: "2%"}}>
-                                <Image src={item.image} width="50" height="50" style={{borderRadius: "50%"}} alt="client" />
-                                <Typography variant="p" sx={{padding: "20px", textAlign: "justify", fontSize: "12px"}}>{item.testimonial}</Typography>
-                                <Typography variant="p" sx={{marginBottom: {md: "0.1rem", xs: "1rem"}, fontSize: {xs: "12px"}, fontWeight: "900"}}>{item.name}</Typography>
-                                <Typography variant="p" sx={{marginBottom: {md: "0.1rem", xs: "1rem"}, fontSize: {xs: "12px"}, fontWeight: "100"}}>{item.position}</Typography>
+                            <Box sx={{display: "flex", flexDirection: "column", alignContent: "center", alignItems: "center", borderRadius: "20px", background: "#fafafa", boxShadow: "20px 20px 60px #d5d5d5, -20px -20px 60px #ffffff", textAlign: "center", width: {md: "90%", xs: "80vw"}, height: {md: "260px", xs: "50vh"}, marginBottom: "20px", padding: "2%"}}>
+                                <Image src={item.image} width="60" height="60" style={{borderRadius: "50%"}} alt="client" />
+                                <Typography variant="p" sx={{padding: "20px", textAlign: "center", fontSize: "1.1rem"}}>{item.testimonial}</Typography>
+                                <Typography variant="p" sx={{marginBottom: {md: "0.1rem", xs: "1rem"}, fontSize: {xs: "1rem"}, fontWeight: "900"}}>{item.name}</Typography>
+                                <Typography variant="p" sx={{marginBottom: {md: "0.1rem", xs: "1rem"}, fontSize: {xs: ".9rem"}, fontWeight: "100"}}>{item.position}</Typography>
                             </Box>
                         </Box>
                     ))
@@ -99,8 +109,8 @@ function Footer() {
                     <Typography variant="h5" sx={{fontWeight: 700}}>Let&apos;s Get in Touch</Typography>
                     <Typography variant="caption">Sign up to receive our newsletter on industry trends</Typography>
                     <Stack sx={{display: "flex", flexDirection: "row"}}>
-                        <TextField size="small" id="outlined-basic" label="Enter email here..." variant="outlined" />
-                        <Button variant="contained" size="small" sx={{color: "white"}}>Send</Button>
+                        <SubscribeButton size="small"  id="outlined-basic" label="Enter email here..." variant="outlined" sx={{borderTopRightRadius: "0", borderBottomRightRadius: "0"}} />
+                        <Button variant="contained" size="small" sx={{color: "white", borderTopLeftRadius: "0", borderBottomLeftRadius: "0"}}>Send</Button>
                     </Stack>
                 </Grid>
             </Grid>

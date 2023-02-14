@@ -21,7 +21,7 @@ function HalfPage({ data }) {
                       <Text data={data}/>                
                     </Box>
                   ):(
-                    <Grid item xs={12} display="flex" flexDirection="column" justifyContent="center" sx={{backgroundColor: data.bg, padding: "0 4.6%",}}>
+                    <Grid item gap={1} xs={12} display="flex" flexDirection="column" justifyContent="center" sx={{backgroundColor: data.bg, padding: "0 4.6%",}}>
                       <Typography variant="h4" color="secondary" sx={{fontStyle: "normal", fontWeight: 700,  lineHeight: "120%", letterSpacing: 3.0}}>
                         {data.text1}
                       </Typography>
@@ -34,7 +34,7 @@ function HalfPage({ data }) {
                       {
                         data.button ? (
                           <Link href={data.button}>
-                            <Button variant="outlined" sx={{width: "10rem", marginTop: "1rem"}} color={data.buttonColor}>Learn More</Button>
+                            <Button variant="outlined" sx={{width: "12rem", marginTop: "1rem"}} color={data.buttonColor}>{data.buttonText}</Button>
                           </Link>  
                           ):(
                             ""
@@ -46,7 +46,7 @@ function HalfPage({ data }) {
                 </>
               ): (
                 <>
-                  <Grid item md={6} xs={6} display="flex" flexDirection="column" justifyContent="center" sx={{padding: "0 4.6%",}}>
+                  <Grid item gap={1} md={6} xs={6} display="flex" flexDirection="column" justifyContent="center" sx={{padding: "0 4.6%",}}>
                     <Typography variant="h4" color="primary" sx={{fontStyle: "normal", fontWeight: 700,  lineHeight: "120%", letterSpacing: 3.0}}>
                       {data.text1}
                     </Typography>
@@ -59,7 +59,7 @@ function HalfPage({ data }) {
                     {
                         data.button ? (
                           <Link href={data.button}>
-                            <Button variant="outlined" sx={{width: "10rem", marginTop: "1rem"}} >Learn More</Button>
+                            <Button variant="outlined" sx={{width: "12rem", marginTop: "1rem"}} >{data.buttonText}</Button>
                           </Link>  
                           ):(
                             ""

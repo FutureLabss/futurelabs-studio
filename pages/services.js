@@ -8,6 +8,7 @@ const data = [
     link: "https://res.cloudinary.com/eacademy/video/upload/v1643989706/Agency/Strategy.mp4",
     text1: "Strategy",
     button: "/strategy",
+    buttonText: "Learn More",
     showAudio: true,
   },
   {
@@ -15,6 +16,7 @@ const data = [
     link: "https://res.cloudinary.com/dps0unrwm/video/upload/v1655900224/Futurelabs/Products_compilation_wef4u2.mp4",
     text1: "Product Design",
     button: "/products",
+    buttonText: "Learn More",
     showAudio: true,
   },
   {
@@ -22,6 +24,7 @@ const data = [
     link: "https://res.cloudinary.com/dps0unrwm/video/upload/v1655900985/Futurelabs/website_compilation_1_ua7nyt.mp4",
     text1: "Websites",
     button: "/websites",
+    buttonText: "Learn More",
     showAudio: true,
   },
   {
@@ -30,6 +33,7 @@ const data = [
     text1: "Branding",
     break: " Advertising",
     button: "/strategy",
+    buttonText: "Learn More",
     showAudio: true,
   },
   {
@@ -37,6 +41,7 @@ const data = [
     link: "https://res.cloudinary.com/usenmfon/video/upload/v1650975960/FutureLabs/All_3D_video_bxracl.mp4",
     text1: "3D Modelling",
     button: "/modelling",
+    buttonText: "Learn More",
     showAudio: true,
   },
   {
@@ -45,6 +50,7 @@ const data = [
     text1: "Digital Art",
     break: "NFTs",
     button: "/digitalart",
+    buttonText: "Learn More",
     showAudio: true,
   },
 ];
