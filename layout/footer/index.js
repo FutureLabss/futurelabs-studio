@@ -47,11 +47,11 @@ function Footer() {
                 {
                     data.map((item, index) => (
                         <Box className="each-slide" key={index} sx={{ display: "flex", justifyContent: "center"}}>
-                            <Box sx={{display: "flex", flexDirection: "column", alignContent: "center", alignItems: "center", borderRadius: "20px", background: "#fafafa", boxShadow: "20px 20px 60px #d5d5d5, -20px -20px 60px #ffffff", textAlign: "center", width: {md: "500px", xs: "80vw"}, height: {md: "260px", xs: "50vh"}, marginBottom: "20px", padding: "2%"}}>
-                                <Image src={item.image} width="50" height="50" style={{borderRadius: "50%"}} alt="client" />
-                                <Typography variant="p" sx={{padding: "20px", textAlign: "justify", fontSize: "12px"}}>{item.testimonial}</Typography>
-                                <Typography variant="p" sx={{marginBottom: {md: "0.1rem", xs: "1rem"}, fontSize: {xs: "12px"}, fontWeight: "900"}}>{item.name}</Typography>
-                                <Typography variant="p" sx={{marginBottom: {md: "0.1rem", xs: "1rem"}, fontSize: {xs: "12px"}, fontWeight: "100"}}>{item.position}</Typography>
+                            <Box sx={{display: "flex", flexDirection: "column", alignContent: "center", alignItems: "center", borderRadius: "20px", background: "#fafafa", boxShadow: "20px 20px 60px #d5d5d5, -20px -20px 60px #ffffff", textAlign: "center", width: {md: "90%", xs: "80vw"}, height: {md: "260px", xs: "50vh"}, marginBottom: "20px", padding: "2%"}}>
+                                <Image src={item.image} width="60" height="60" style={{borderRadius: "50%"}} alt="client" />
+                                <Typography variant="p" sx={{padding: "20px", textAlign: "center", fontSize: "1.1rem"}}>{item.testimonial}</Typography>
+                                <Typography variant="p" sx={{marginBottom: {md: "0.1rem", xs: "1rem"}, fontSize: {xs: "1rem"}, fontWeight: "900"}}>{item.name}</Typography>
+                                <Typography variant="p" sx={{marginBottom: {md: "0.1rem", xs: "1rem"}, fontSize: {xs: ".9rem"}, fontWeight: "100"}}>{item.position}</Typography>
                             </Box>
                         </Box>
                     ))

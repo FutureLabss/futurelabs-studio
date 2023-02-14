@@ -12,7 +12,7 @@ function FullPage({ video }) {
   }
 
   return (
-    <Box component="section" sx={{height: "100vh",  position: "relative"}}>
+    <Box component="section" className="vid" sx={{height: "100vh",  position: "relative"}}>
         <Video data={video}/>
         <Box sx={{width:"100%", padding: "8% 4.6%", position: "absolute", bottom: {md: "0.5rem", xs: "2.5rem"}, left: 0, zIndex: 1}}>
           <Stack sx={{maxWidth: {md: "380px", xs: "300px"}, marginBottom:  {md: "0.2rem", xs: "1rem"},}}>
