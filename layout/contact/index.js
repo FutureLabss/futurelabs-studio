@@ -33,7 +33,7 @@ function Contact() {
                     <TextField
                         id="message"
                         multiline
-                        rows={mobile ? 3 : 9}
+                        rows={mobile ? 6 : 9}
                         placeholder="Start typing here..."
                         variant="standard"
                         sx={{width: "20rem"}}
