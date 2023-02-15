@@ -1,19 +1,23 @@
-import {useState} from 'react';
+import React from 'react';
 import {Box, Stack, Grid, Button, Typography} from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 import Video from './video'
+import useSound from '../hooks/useSound';
+import useElementOnScreen from '../hooks/useElementOnScreen';
 
 function FullPage({ video }) {
-  const [sound, setSound] = useState(true);
-  const handleSound = () =>{
-    console.log("clicked")
-    setSound(!sound);
-  }
+  const [ containerRef, videoRef  ] = useElementOnScreen({
+    root: null,
+    rootMargin: "0px",
+    threshold: 1
+  })
+  // const videoRef = useRef(null)
+  const { sound, handleSound } = useSound(videoRef)
 
   return (
-    <Box component="section" className="vid" sx={{height: "100vh",  position: "relative"}}>
-        <Video data={video}/>
+    <Box component="section" ref={containerRef} className="vid" sx={{height: "100vh",  position: "relative"}}>
+        <Video data={video} videoRef={videoRef} />
         <Box sx={{width:"100%", padding: "8% 4.6%", position: "absolute", bottom: {md: "0.5rem", xs: "2.5rem"}, left: 0, zIndex: 1}}>
           <Stack spacing={1} sx={{maxWidth: {md: "400px", xs: "300px"}, marginBottom:  {md: "0.2rem", xs: "1rem"},}}>
             <Typography variant="large" color="secondary" sx={{fontStyle: "normal", fontWeight: 700, lineHeight: "120%"}}>
