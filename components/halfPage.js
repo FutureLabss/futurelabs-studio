@@ -1,15 +1,23 @@
+import React from 'react';
 import { Grid, Button, Typography, useMediaQuery, Box } from "@mui/material";
 import { useTheme } from "@emotion/react";
 import Image from "next/image";
 import Link from "next/link";
 import Video from "./video";
 import Text from "./text";
+import useElementOnScreen from '../hooks/useElementOnScreen';
 
 function HalfPage({ data }) {
+  const [ containerRef, videoRef  ] = useElementOnScreen({
+    root: null,
+    rootMargin: "0px",
+    threshold: 1
+  })
+
   const theme = useTheme();
   const mobile = useMediaQuery(theme.breakpoints.down("md"));
   return (
-        <Box component="section">
+        <Box component="section" ref={containerRef} >
           <Grid container direction={data.reverse ? "row-reverse" : "row"} sx={{ minHeight: '100vh',}}>
             {
               mobile ? (
@@ -17,7 +25,7 @@ function HalfPage({ data }) {
                 {
                   data.poster ? (
                     <Box sx={{height: "100vh", position: "relative"}}>
-                      <Video data={data}/>
+                      <Video data={data} videoRef={videoRef} />
                       <Text data={data}/>                
                     </Box>
                   ):(
@@ -70,7 +78,7 @@ function HalfPage({ data }) {
                     {
                       data.poster ? (
                         <Box sx={{height: "100vh", position: "relative"}}>
-                          <Video data={data}/>
+                          <Video data={data} videoRef={videoRef} />
                         </Box>
                       ) : (
                         <Box sx={{height: "100%",display: "flex", justifyContent: "center", alignItems: "center"}}>
