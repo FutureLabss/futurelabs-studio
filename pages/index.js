@@ -1,6 +1,9 @@
 import DefaultLayout from "../layout";
 import HalfPage from "../components/halfPage"
 import FullPage from "../components/fullPage";
+import BlogSection from "../components/blog";
+import fs from "fs"
+import matter from "gray-matter"
 
 const videos = [
   {
@@ -57,7 +60,7 @@ const data = [
   },
 ]
 
-function HomePage() {    
+export default function HomePage({ blogs }) {    
   return (
     <DefaultLayout>
       <FullPage video={videos[0]} />
@@ -65,8 +68,27 @@ function HomePage() {
       <HalfPage data={data[1]} />
       <FullPage video={videos[1]} />
       <FullPage video={videos[2]} />
+      <BlogSection data={blogs} />
     </DefaultLayout>
   )
 }
 
-export default HomePage
+export async function getStaticProps(){
+  const filesInBlogs = fs.readdirSync('./content/blogs')
+
+  const blogs = filesInBlogs.map(filename => {
+    const file = fs.readFileSync(`./content/blogs/${filename}`, 'utf8')
+    const matterData = matter(file)
+
+    return {
+      ...matterData.data,
+      slug: filename.slice(0, filename.indexOf('.'))
+    }
+  })
+
+  return {
+    props: {
+      blogs
+    }
+  }
+}

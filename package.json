@@ -16,13 +16,16 @@
     "@fontsource/inter": "^4.5.15",
     "@mui/icons-material": "^5.11.0",
     "@mui/material": "^5.11.6",
+    "gray-matter": "^4.0.3",
     "next": "13.1.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-markdown": "6.0.3",
     "react-slideshow-image": "^4.2.0"
   },
   "devDependencies": {
     "eslint": "8.32.0",
-    "eslint-config-next": "13.1.6"
+    "eslint-config-next": "13.1.6",
+    "webpack-cli": "^5.0.1"
   }
 }
