@@ -24,7 +24,8 @@ const videos = [
     text1: "Connect with us on LinkedIn",
     text2: "Checkout our latest updates on LinkedIn",
     poster: "/images/LinkedIn.jpg",
-    button: "",
+    button: "https://www.linkedin.com/company/future-labs-ng/",
+    buttonText: "Visit Page",
     showAudio: true,
   },
   {
@@ -32,7 +33,8 @@ const videos = [
     text1: "Connect with us on Twitter",
     text2: "Checkout our latest activities on Twitter",
     poster: "/images/Twitter.jpg",
-    button: "",
+    button: "https://twitter.com/FutureLabsNG",
+    buttonText: "Visit Page",
     showAudio: true,
   },
   {
@@ -40,7 +42,8 @@ const videos = [
     text1: "Connect with us on Facebook",
     text2: "Checkout our latest activities on Facebook",
     poster: "/images/Facebook.jpg",
-    button: "",
+    button: "https://www.facebook.com/FutureLabsNews",
+    buttonText: "Visit Page",
     showAudio: true,
   },
   {
@@ -48,7 +51,8 @@ const videos = [
     text1: "We are on Instagram",
     text2: "Visit our Instagram page to see what we do",
     poster: "/images/instagram.jpg",
-    button: "",
+    button: "https://www.instagram.com/futurelabshq/",
+    buttonText: "Visit Page",
     showAudio: true,
   },
 ]
