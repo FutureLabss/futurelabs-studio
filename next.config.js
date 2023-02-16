@@ -4,7 +4,7 @@ const nextConfig = {
   images: {
     domains: ['res.cloudinary.com'],
   },
-  webpack5: true,
+  webpack: true,
   webpack: (config) => {
     config.resolve.fallback = {fs: false}
     return config

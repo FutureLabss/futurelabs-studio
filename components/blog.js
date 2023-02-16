@@ -7,7 +7,7 @@ export default function Blog({ data }) {
     <>
       <Box component="section" sx={{height: "100vh",display: "flex", flexDirection: "column", justifyContent: "center", padding: "4% 4.6%"}}>
           <Typography variant="large"  sx={{textAlign: "center", fontWeight: 700, }}>Latest Stories</Typography>
-          <Grid container gap={2} sx={{ justifyContent: "center",alignItems: "center", height: "70%", border: "solid red"}}>
+          <Grid container gap={2} sx={{ justifyContent: "center",alignItems: "center", height: "70%", }}>
             {
               data.map(blog => (
                 <Link key={blog.slug} href={`/blog/${blog.slug}`}>
