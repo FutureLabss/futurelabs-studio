@@ -9,10 +9,10 @@ function useElementOnScreen(options){
 
         if(entry.isIntersecting){
             setTimeout(function(){
-                videoRef.current.play()
+                videoRef.current?.play()
             }, 1000)
         } else {
-            videoRef.current.pause()
+            videoRef.current?.pause()
         }
     }
 
