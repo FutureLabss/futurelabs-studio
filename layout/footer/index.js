@@ -114,7 +114,7 @@ function Footer() {
                     </Stack>
                 </Grid>
             </Grid>
-            <Box sx={{display: "flex", justifyContent: "center", color: "#fff", backgroundColor: "#FF9000",}}>
+            <Box sx={{display: "flex", justifyContent: "center", color: "#fff", backgroundColor: "#FF9000"}}>
                 <Stack sx={{margin: "0 0.1rem"}}>&copy;</Stack>
                 <Stack sx={{margin: "0 0.1rem"}}>{date}</Stack>
                 <Stack sx={{margin: "0 0.1rem"}}>FUTURELABS</Stack>
