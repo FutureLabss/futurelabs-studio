@@ -6,7 +6,7 @@ function Contact() {
   const theme = useTheme();
   const mobile = useMediaQuery(theme.breakpoints.down("md"));
   return (
-    <Box component="section" sx={{height: "100vh", display: "flex", flexDirection: "column", justifyContent: "center", padding: "4% 4.6%"}}>
+    <Box component="section" id="contact" sx={{height: "100vh", display: "flex", flexDirection: "column", justifyContent: "center", padding: "4% 4.6%"}}>
             <Typography variant="large"  sx={{textAlign: "center", fontWeight: 700, }}>Contact Us</Typography>
         <Grid container my={2} sx={{ height: "70%"}}>
             <Grid item md={6} display="flex" flexDirection="column" justifyContent="space-between">
