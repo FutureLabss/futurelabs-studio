@@ -15,7 +15,8 @@ const routes = [
   { path: '/strategy', title: 'Strategy' },
   { path: '/branding', title: 'Branding' },
   { path: '/digitalart', title: 'Digital Arts & NFTs' },
-  { path: '/contact', title: 'Contact Us' },
+  { path: '#contact', title: 'Contact Us' },
+  { path: '/blog', title: 'Blog' },
 ]
 
 
