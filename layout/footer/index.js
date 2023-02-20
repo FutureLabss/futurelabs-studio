@@ -101,7 +101,7 @@ function Footer() {
                         <Link href="/services">
                             <Typography sx={{fontWeight: 100}}>SERVICES</Typography>
                         </Link> 
-                        <Link href="/">
+                        <Link href="/blog">
                             <Typography sx={{fontWeight: 100}}>BLOG</Typography>
                         </Link> 
                 </Grid>
