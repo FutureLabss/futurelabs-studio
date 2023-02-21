@@ -1,7 +1,11 @@
 ---
 title: 5 project management lessons we learnt about software development from
   building our studio website
+description: About Software
+download: Nill
+author: Manny
 date: July 15, 2022 3:01 AM
+thumbnail: /uploads/cytonn-photography-zjekicy5exy-unsplash.jpg
 ---
 ![Pc on a desk](/uploads/q7jtmxthhvhev8qxclop.jpg "Software Development")
 
