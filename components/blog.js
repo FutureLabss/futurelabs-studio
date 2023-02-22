@@ -38,8 +38,8 @@ export default function Blog({ data }) {
                 <>
                 {
                   mobile ? (
-                    <Grid item xs={12} my={3}>
-                      <Link key={item.slug} href={`/blog/${item.slug}`}>
+                    <Grid item key={item.slug} xs={12} my={3}>
+                      <Link href={`/blog/${item.slug}`}>
                         <Typography variant="h2">
                           {item.title}
                         </Typography>
@@ -51,8 +51,8 @@ export default function Blog({ data }) {
                     </Grid>
                    ):(
                     <Grid
-                  key={index}
                   item
+                  key={item.slug}
                   xs={12}
                   sm={6}
                   sx={{ display: "flex", justifyContent: "center" }}
@@ -67,7 +67,7 @@ export default function Blog({ data }) {
                       backgroundImage: `url("https://res.cloudinary.com/usenmfon/image/upload/v1657896137/q7jtmxthhvhev8qxclop.jpg")`,
                     }}
                   >
-                    <Link key={item.slug} href={`/blog/${item.slug}`}>
+                    <Link href={`/blog/${item.slug}`}>
                       <CardContent
                         sx={{
                           height: "200px",

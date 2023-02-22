@@ -64,7 +64,7 @@ export default function HomePage({ blogs }) {
   return (
     <DefaultLayout>
       <FullPage video={videos[0]} />
-      <HalfPage data={data[0]}/>
+      <HalfPage data={data[0]} />
       <HalfPage data={data[1]} />
       <FullPage video={videos[1]} />
       <FullPage video={videos[2]} />
