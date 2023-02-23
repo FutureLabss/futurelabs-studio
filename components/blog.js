@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   Box,
   Grid,
@@ -8,8 +9,6 @@ import {
   CardContent,
 } from "@mui/material";
 import Link from "next/link";
-import Head from "next/head";
-import Image from "next/image";
 import { useTheme } from "@emotion/react";
 
 export default function Blog({ data }) {
@@ -34,11 +33,11 @@ export default function Blog({ data }) {
           Latest Stories
         </Typography>
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-              {data.map((item, index) => (
-                <>
+              {data.map((item) => (
+                <React.Fragment key={item.slug}>
                 {
                   mobile ? (
-                    <Grid item key={item.slug} xs={12} my={3}>
+                    <Grid item xs={12} my={3}>
                       <Link href={`/blog/${item.slug}`}>
                         <Typography variant="h2">
                           {item.title}
@@ -52,7 +51,6 @@ export default function Blog({ data }) {
                    ):(
                     <Grid
                   item
-                  key={item.slug}
                   xs={12}
                   sm={6}
                   sx={{ display: "flex", justifyContent: "center" }}
@@ -121,7 +119,7 @@ export default function Blog({ data }) {
                 </Grid>
                    )
                 }
-                </>
+                </React.Fragment>
               ))}
         </Grid>
       </Box>
