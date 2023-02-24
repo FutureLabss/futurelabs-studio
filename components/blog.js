@@ -96,7 +96,6 @@ export default function Blog({ data }) {
                           sx={{ fontSize: 23 }}
                           color="white"
                           gutterBottom
-                          className="raleway__font"
                         >
                           {item.title}
                         </Typography>
@@ -109,7 +108,6 @@ export default function Blog({ data }) {
                             width: { md: "100%" },
                             textAlign: { md: "center" },
                           }}
-                          className="raleway__font"
                         >
                           Read more &rarr;
                         </Typography>
