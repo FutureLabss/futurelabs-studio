@@ -7,8 +7,11 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import { useTheme } from "@emotion/react";
 import Link from 'next/link'
 import Image from 'next/image'
+import axios from 'axios'
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
+
+const SERVER_URL = 'https://futurelabs-blog.onrender.com/contact/send';
 
 const testimonial = [
     {
@@ -39,6 +42,22 @@ function Footer() {
     const [data] = useState(testimonial);
     const theme = useTheme();
     const mobile = useMediaQuery(theme.breakpoints.down("md"));
+
+    const handleSubmit = async(event) => {
+        event.preventDefault();
+
+        let form = event.currentTarget;
+        let formData = new FormData(form)
+        let payload = Object.fromEntries(formData.entries())
+
+        try{
+            await axios.post(SERVER_URL, payload)
+        }catch(error){
+            console.log(error)
+        }
+
+        document.forms[0].reset();
+    } 
 
     const SubscribeButton = styled(TextField)({
         '& .MuiOutlinedInput-root': {
@@ -108,10 +127,10 @@ function Footer() {
                 <Grid item md={4} xs={12} sx={{ padding: "0% 4.9%",}} display="flex" flexDirection="column" justifyContent="space-around" >
                     <Typography variant="h5" sx={{fontWeight: 700}}>Let&apos;s Get in Touch</Typography>
                     <Typography variant="caption">Sign up to receive our newsletter on industry trends</Typography>
-                    <Stack sx={{display: "flex", flexDirection: "row"}}>
-                        <SubscribeButton size="small"  id="outlined-basic" label="Enter email here..." variant="outlined" sx={{borderTopRightRadius: "0", borderBottomRightRadius: "0"}} />
-                        <Button variant="contained" size="small" sx={{color: "white", borderTopLeftRadius: "0", borderBottomLeftRadius: "0"}}>Send</Button>
-                    </Stack>
+                        <form style={{display: "flex", flexDirection: "row"}} onSubmit={handleSubmit}>
+                            <SubscribeButton size="small" type="email" name="email" id="outlined-basic" label="Enter email here..." variant="outlined" sx={{borderTopRightRadius: "0", borderBottomRightRadius: "0"}} />
+                            <Button variant="contained" size="small" type="submit" sx={{color: "white", borderTopLeftRadius: "0", borderBottomLeftRadius: "0"}}>Send</Button>
+                        </form>
                 </Grid>
             </Grid>
             <Box sx={{display: "flex", justifyContent: "center", color: "#fff", backgroundColor: "#FF9000",}}>
