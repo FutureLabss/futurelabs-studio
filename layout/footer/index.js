@@ -101,9 +101,9 @@ function Footer() {
                         <Link href="/services">
                             <Typography sx={{fontWeight: 100}}>SERVICES</Typography>
                         </Link> 
-                        <Link href="/blog">
+                        <Link href="/">
                             <Typography sx={{fontWeight: 100}}>BLOG</Typography>
-                        </Link> 
+                        </Link>
                 </Grid>
                 <Grid item md={4} xs={12} sx={{ padding: "0% 4.9%",}} display="flex" flexDirection="column" justifyContent="space-around" >
                     <Typography variant="h5" sx={{fontWeight: 700}}>Let&apos;s Get in Touch</Typography>
