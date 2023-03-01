@@ -1,35 +1,44 @@
-import {Box, Stack, Typography, TextField, InputLabel, Input, Button, Grid, useMediaQuery} from '@mui/material'
+import { useState } from 'react'
+import { Box, Stack, Typography, TextField, InputLabel, Input, Button, Grid, useMediaQuery, CircularProgress, Alert } from '@mui/material'
 import { useTheme } from "@emotion/react";
 import axios from "axios";
 
 const SERVER_URL = 'https://futurelabs-blog.onrender.com/contact';
 
 function Contact() {
-  const theme = useTheme();
-  const mobile = useMediaQuery(theme.breakpoints.down("md"));
+    const [loading, setLoading] = useState(false)
+    const [error, setError] = useState("")
+    const [message, setMessage] = useState("")
 
-  const handleSubmit = async(event) => {
-    event.preventDefault();
+    const theme = useTheme();
+    const mobile = useMediaQuery(theme.breakpoints.down("md"));
 
-    let form = event.currentTarget;
-    let formData = new FormData(form)
-    let payload = Object.fromEntries(formData.entries())
 
-    console.log(payload)
-    try{
-        await axios.post(SERVER_URL, payload)
-    }catch(error){
-        console.log(error)
+    const handleSubmit = async(event) => {
+        event.preventDefault();
+
+        let form = event.currentTarget;
+        let formData = new FormData(form)
+        let payload = Object.fromEntries(formData.entries())
+
+        try{
+            setError("")
+            setLoading(true)
+            await axios.post(SERVER_URL, payload)
+            setMessage("Successfully sent!")
+        }catch(error){
+            setError("Failed to send, please try again")
+        }
+        setLoading(false);
+
+        document.forms[0].reset();
     }
-
-    document.forms[0].reset();
-  }
 
   return (
     <Box component="section" id="contact" sx={{height: "100vh", display: "flex", flexDirection: "column", justifyContent: "center", padding: "4% 4.6%"}}>
-            <Typography variant="large"  sx={{textAlign: "center", fontWeight: 700, }}>Contact Us</Typography>
-        <Grid container my={2} sx={{ height: "70%"}}>
-            <form onSubmit={handleSubmit}>
+        <Typography variant="large"  sx={{textAlign: "center", fontWeight: 700, }}>Contact Us</Typography>
+        <form onSubmit={handleSubmit}>
+            <Grid container my={2} sx={{ height: "70%"}}>
                 <Grid item md={6} display="flex" flexDirection="column" justifyContent="space-between">
                     <Stack sx={{marginTop: {md: "10px", xs: "20px"}}}>
                         <InputLabel htmlFor="name" sx={{ fontWeight: 700, fontSize: "18px",}}>My name is</InputLabel>
@@ -45,7 +54,7 @@ function Contact() {
                     </Stack> 
                     <Stack sx={{marginTop: {md: "10px", xs: "20px"}}}>
                         <InputLabel htmlFor="email" sx={{ fontWeight: 700, fontSize: "18px",}}>Reach me at</InputLabel>
-                        <Input sx={{width: "20rem"}} type="email" name="email" id="email" placeholder="Your@email.com" required/>
+                        <Input sx={{width: "20rem"}} name="email" id="email" placeholder="Your@email.com" required/>
                     </Stack>     
                 </Grid>
                 <Grid item md={6} display="flex" flexDirection="column">
@@ -62,10 +71,23 @@ function Contact() {
                             required
                         />
                     </Stack>
-                    <Button variant="contained" type="submit" sx={{width: "10rem", marginTop: {md: "10px", xs: "20px"}, color: "white"}}>Submit</Button>
+                    {
+                        error && (
+                            <Alert severity="error">{error}</Alert>
+                        )
+                    }
+                    {
+                        message && (
+                            <Alert severity="success">{message}</Alert>
+                        )
+                    }
+                    {
+                        loading ? <Stack sx={{display: "flex", flexDirection: "row", justifyContent: "center", border: "solid white" }}><CircularProgress size={30} /></Stack>:
+                        <Button variant="contained" type="submit" sx={{width: "10rem", marginTop: {md: "10px", xs: "20px"}, color: "white"}}>Submit</Button>
+                    }
                 </Grid>
-            </form>
-        </Grid>
+            </Grid>
+        </form>
     </Box>
   )
 }

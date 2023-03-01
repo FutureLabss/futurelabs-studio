@@ -1,5 +1,5 @@
 import { useState, useEffect} from 'react'
-import { Box, Stack, Grid, Typography, TextField, Button, useMediaQuery, Input } from  '@mui/material'
+import { Box, Stack, Grid, Typography, TextField, Button, useMediaQuery, CircularProgress, } from  '@mui/material'
 import { styled } from '@mui/material/styles'
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -40,6 +40,7 @@ const testimonial = [
 function Footer() {
     const [date, setDate] = useState();
     const [data] = useState(testimonial);
+    const [loading, setLoading] = useState(false)
     const theme = useTheme();
     const mobile = useMediaQuery(theme.breakpoints.down("md"));
 
@@ -51,10 +52,12 @@ function Footer() {
         let payload = Object.fromEntries(formData.entries())
 
         try{
+            setLoading(true)
             await axios.post(SERVER_URL, payload)
         }catch(error){
-            console.log(error)
+            console.log("Failed to send, please try again")
         }
+        setLoading(false);
 
         document.forms[0].reset();
     } 
@@ -129,7 +132,10 @@ function Footer() {
                     <Typography variant="caption">Sign up to receive our newsletter on industry trends</Typography>
                         <form style={{display: "flex", flexDirection: "row"}} onSubmit={handleSubmit}>
                             <SubscribeButton size="small" type="email" name="email" id="outlined-basic" label="Enter email here..." variant="outlined" sx={{borderTopRightRadius: "0", borderBottomRightRadius: "0"}} />
+                    {
+                        loading ? <Stack sx={{display: "flex", flexDirection: "row", justifyContent: "center", border: "solid white" }}><CircularProgress size={30} /></Stack>:
                             <Button variant="contained" size="small" type="submit" sx={{color: "white", borderTopLeftRadius: "0", borderBottomLeftRadius: "0"}}>Send</Button>
+                    }
                         </form>
                 </Grid>
             </Grid>
