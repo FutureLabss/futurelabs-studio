@@ -16,7 +16,7 @@ const routes = [
   { path: '/branding', title: 'Branding' },
   { path: '/digitalart', title: 'Digital Arts & NFTs' },
   { path: '#contact', title: 'Contact Us' },
-  // { path: '/', title: 'Blog' },
+  { path: '/blog', title: 'Blog' },
 ]
 
 
