@@ -42,7 +42,7 @@ function Contact() {
                 <Grid item md={6} display="flex" flexDirection="column" justifyContent="space-between">
                     <Stack sx={{marginTop: {md: "10px", xs: "20px"}}}>
                         <InputLabel htmlFor="name" sx={{ fontWeight: 700, fontSize: "18px",}}>My name is</InputLabel>
-                        <Input sx={{width: "20rem"}} name="name" id="name" placeholder="Your name" required/>
+                        <Input sx={{width: "20rem"}} type="text" name="name" id="name" placeholder="Your name" required/>
                     </Stack>  
                     <Stack sx={{marginTop: {md: "10px", xs: "20px"}}}>
                         <InputLabel htmlFor="phonenumber" sx={{ fontWeight: 700, fontSize: "18px",}}>My phone number is</InputLabel>
@@ -50,11 +50,11 @@ function Contact() {
                     </Stack> 
                     <Stack sx={{marginTop: {md: "10px", xs: "20px"}}}>
                         <InputLabel htmlFor="company" sx={{ fontWeight: 700, fontSize: "18px",}}>I work at</InputLabel>
-                        <Input sx={{width: "20rem"}} name="company" id="company" placeholder="Your company" required/>
+                        <Input sx={{width: "20rem"}} type="text" name="company" id="company" placeholder="Your company" required/>
                     </Stack> 
                     <Stack sx={{marginTop: {md: "10px", xs: "20px"}}}>
                         <InputLabel htmlFor="email" sx={{ fontWeight: 700, fontSize: "18px",}}>Reach me at</InputLabel>
-                        <Input sx={{width: "20rem"}} name="email" id="email" placeholder="Your@email.com" required/>
+                        <Input sx={{width: "20rem"}} type="email" name="email" id="email" placeholder="Your@email.com" required/>
                     </Stack>     
                 </Grid>
                 <Grid item md={6} display="flex" flexDirection="column">
