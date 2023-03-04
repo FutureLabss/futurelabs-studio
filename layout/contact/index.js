@@ -29,6 +29,7 @@ function Contact() {
         }catch(error){
             setError("Failed to send, please try again")
         }
+        setTimeout(() => setMessage(""), 3000)
         setLoading(false);
 
         document.forms[0].reset();
