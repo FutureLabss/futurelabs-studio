@@ -1,7 +1,8 @@
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
-import { Button, Divider, Drawer, Stack, Box, ListItemIcon } from '@mui/material';
+import { styled, } from '@mui/material/styles';
+import { Button, Divider, Drawer, Box, ListItemIcon } from '@mui/material';
 import Link from 'next/link'
 import CloseIcon from '@mui/icons-material/Close';
 import Image from 'next/image'
@@ -19,6 +20,12 @@ const routes = [
   // { path: '/', title: 'Blog' },
 ]
 
+const MuiListItem = styled(ListItem)({
+      "&:hover": {
+        backgroundColor: "transparent",
+        color: "#FF9000"
+      },
+})
 
 function DisplayDrawer({close}) {
 
@@ -33,16 +40,16 @@ function DisplayDrawer({close}) {
               </ListItemIcon>
             </ListItem>
           </Link>
-          <ListItem sx={{ display: "flex", flexDirection: "row", justifyContent: "flex-end"}} onClick={close}>
+          <MuiListItem sx={{ display: "flex", flexDirection: "row", justifyContent: "flex-end"}} onClick={close}>
               <CloseIcon sx={{cursor: "pointer"}}/>
-          </ListItem>
+          </MuiListItem>
         </Box>
         {/* <Divider sx={{my:2}} /> */}
         {routes.map((item, index) => (
           <Link passHref href={item.path} key={index}>
-            <ListItem key={index} button>
+            <MuiListItem key={index} button>
               <ListItemText primary={item.title} />
-            </ListItem>
+            </MuiListItem>
           </Link>
         ))}
       </List>
