@@ -6,6 +6,15 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Image from 'next/image'
 import Link from 'next/link'
+import { styled, } from '@mui/material/styles';
+
+const MuiIconButton = styled(IconButton)({
+  "&:hover": {
+    backgroundColor: "transparent",
+    color: "#FF9000"
+  },
+})
+
 
 export default function DefaultToolbar(props) {
   return (
@@ -19,7 +28,7 @@ export default function DefaultToolbar(props) {
           </Box>
           {/* <Stack sx={{ flexGrow: 0.1, height: "23px", width:"2px", color: "rgb(139, 139, 138)" }}></Stack> */}
           {/* <Divider variant="middle" sx={{ height: "23px", width:"10px", color: "white" }} orientation="vertical" /> */}
-          <IconButton
+          <MuiIconButton
             size="large"
             edge="start"
             color="secondary"
@@ -27,7 +36,7 @@ export default function DefaultToolbar(props) {
             onClick={props.toggleDrawer} sx={{ mr: 2 , display: { xs: 'block', md: 'block' } }}
           >
             <MenuIcon />
-          </IconButton>
+          </MuiIconButton>
         </Toolbar>
       </AppBar>
     </Box>
