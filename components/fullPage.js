@@ -19,7 +19,8 @@ function FullPage({ video }) {
     <Box component="section" ref={containerRef} className="vid" sx={{height: "100vh",  position: "relative"}}>
         <Video data={video} videoRef={videoRef} />
         <Box sx={{width:"100%", padding: "8% 4.6%", position: "absolute", bottom: {md: "0.5rem", xs: "2.5rem"}, left: 0, zIndex: 1}}>
-          <Stack spacing={1} sx={{maxWidth: {md: "400px", xs: "300px"}, marginBottom:  {md: "0.2rem", xs: "1rem"},}}>
+          <Grid container gap={1} justifyContent="space-between" sx={{marginBottom:  {md: "0.2rem", xs: "1rem"},}}>
+          <Grid item md={5} xs={8}>
             <Typography variant="large" color="secondary" sx={{fontStyle: "normal", fontWeight: 700, lineHeight: "120%"}}>
               {video.text1}
             </Typography>
@@ -29,21 +30,42 @@ function FullPage({ video }) {
             <Typography variant="h6" color="secondary" sx={{fontWeight: "normal",}} >
               {video.text3}
             </Typography>
-          </Stack>
+
+          </Grid>
+          {
+            video.button && video.showAudio ? (
+                  ""
+                ):(
+                  video.showAudio ? (
+                    <Grid item md={6} sx={{display:"flex", flexDirection: "column", justifyContent: "flex-end", alignItems: "flex-end" }} onClick={handleSound}>
+                    {
+                    sound ? (
+                        <Image src="/images/mute.png" width="40" height="40" alt="sound"></Image>
+                      ):(
+                        <Image src="/images/unmute.png" width="40" height="40" alt="sound"></Image>
+                      )
+                    }
+                  </Grid>
+                  ): (
+                    ""
+                  )
+                )
+              }
+          </Grid>
           <Grid container justifyContent="space-between">
             <Grid item>
-            {
-              video.button ? (
-              <Link href={video.button}>
-                <Button variant="outlined" sx={{width: "12rem"}}>{video.buttonText}</Button>
-              </Link>  
-              ):(
-                ""
-              )
-            }
+              {
+                video.button ? (
+                <Link href={video.button}>
+                  <Button variant="outlined" sx={{width: "12rem"}}>{video.buttonText}</Button>
+                </Link>  
+                ):(
+                  ""
+                )
+              }
             </Grid>
               {
-                video.showAudio ? (
+                video.button && video.showAudio ? (
                   <Grid item sx={{}} onClick={handleSound}>
                     {
                     sound ? (
