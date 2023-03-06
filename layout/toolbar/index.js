@@ -29,13 +29,13 @@ export default function DefaultToolbar(props) {
           {/* <Stack sx={{ flexGrow: 0.1, height: "23px", width:"2px", color: "rgb(139, 139, 138)" }}></Stack> */}
           {/* <Divider variant="middle" sx={{ height: "23px", width:"10px", color: "white" }} orientation="vertical" /> */}
           <MuiIconButton
-            size="large"
+            size="small"
             edge="start"
             color="secondary"
             aria-label="menu"
             onClick={props.toggleDrawer} sx={{ mr: 2 , display: { xs: 'block', md: 'block' } }}
           >
-            <MenuIcon />
+            <MenuIcon fontSize='large'/>
           </MuiIconButton>
         </Toolbar>
       </AppBar>
