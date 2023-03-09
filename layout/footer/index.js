@@ -71,6 +71,13 @@ function Footer() {
         },   
     })
 
+    const MuiTypography = styled(Typography)({
+        "&:hover": {
+          backgroundColor: "transparent",
+          color: "#FF9000"
+        },
+  })
+
     useEffect(() => {setDate(new Date().getFullYear())}, [])
   return (
     <Box component="section" sx={{ height: "100vh" }}>
@@ -83,7 +90,7 @@ function Footer() {
                                 <Image src={item.image} width="60" height="60" style={{borderRadius: "50%"}} alt="client" />
                                 <Typography variant="p" sx={{padding: "20px", textAlign: "center", fontSize: "1.1rem"}}>{item.testimonial}</Typography>
                                 <Typography variant="p" sx={{marginBottom: {md: "0.1rem", xs: "1rem"}, fontSize: {xs: "1rem"}, fontWeight: "900"}}>{item.name}</Typography>
-                                <Typography variant="p" sx={{marginBottom: {md: "0.1rem", xs: "1rem"}, fontSize: {xs: ".9rem"}, fontWeight: "100"}}>{item.position}</Typography>
+                                <Typography variant="p" sx={{marginBottom: {md: "0.1rem", xs: "1rem"}, fontSize: {xs: ".9rem"}, fontWeight: "300"}}>{item.position}</Typography>
                             </Box>
                         </Box>
                     ))
@@ -115,16 +122,16 @@ function Footer() {
                 <Grid item md={4} display="flex" flexDirection="column" justifyContent="space-around" sx={{padding: {md: "0% 13%", xs: "0% 4.9%"},}}>
                     <Typography variant="h5" sx={{fontWeight: 700}}>Company</Typography>
                         <Link href="/">
-                            <Typography sx={{fontWeight: 100}}>HOME</Typography>
+                            <MuiTypography sx={{fontWeight: 300}}>HOME</MuiTypography>
                         </Link> 
                         <Link href="/about">
-                            <Typography sx={{fontWeight: 100}}>ABOUT</Typography>
+                            <MuiTypography sx={{fontWeight: 300}}>ABOUT</MuiTypography>
                         </Link> 
                         <Link href="/services">
-                            <Typography sx={{fontWeight: 100}}>SERVICES</Typography>
+                            <MuiTypography sx={{fontWeight: 300}}>SERVICES</MuiTypography>
                         </Link> 
                         {/* <Link href="/">
-                            <Typography sx={{fontWeight: 100}}>BLOG</Typography>
+                            <MuiTypography sx={{fontWeight: 300}}>BLOG</MuiTypography>
                         </Link> */}
                 </Grid>
                 <Grid item md={4} xs={12} sx={{ padding: "0% 4.9%",}} display="flex" flexDirection="column" justifyContent="space-around" >
