@@ -32,6 +32,7 @@ function FullPage({ video }) {
             </Typography>
 
           </Grid>
+          {/* Show audio icon only when it satisfies the conditions below */}
           {
             video.button && video.showAudio ? (
                   ""
@@ -52,37 +53,44 @@ function FullPage({ video }) {
                 )
               }
           </Grid>
-          <Grid container justifyContent="space-between">
-            <Grid item>
-              {
-                video.button ? (
-                <Link href={video.button}>
-                  <Button variant="outlined" sx={{width: "12rem"}}>{video.buttonText}</Button>
-                </Link>  
-                ):(
-                  ""
-                )
-              }
-            </Grid>
-              {
-                video.button && video.showAudio ? (
-                  <Grid item sx={{}} onClick={handleSound}>
-                    {
-                    sound ? (
-                      <Image src="/images/mute.png" width="40" height="40" alt="sound"></Image>
-                    ):(
-                      <Image src="/images/unmute.png" width="40" height="40" alt="sound"></Image>
-                    )
-                    }
-                  </Grid>
-                ):(
-                  ""
-                )
-              }
-          </Grid>
+          <AudioAndButton video={video} sound={sound} handleSound={handleSound} />
          </Box>
     </Box>
   )
 }
 
 export default  FullPage
+
+export function AudioAndButton({ video, sound, handleSound }){
+  return (
+    <Grid container justifyContent="space-between">
+      <Grid item>
+        {
+          video.button ? (
+          <Link href={video.button}>
+            <Button variant="outlined" sx={{width: "12rem"}}>{video.buttonText}</Button>
+          </Link>  
+          ):(
+            ""
+          )
+        }
+      </Grid>
+      {/* Show audio icon only when it satisfies the conditions below */}
+        {
+          video.button && video.showAudio ? (
+            <Grid item sx={{}} onClick={handleSound}>
+              {
+              sound ? (
+                <Image src="/images/mute.png" width="40" height="40" alt="sound"></Image>
+              ):(
+                <Image src="/images/unmute.png" width="40" height="40" alt="sound"></Image>
+              )
+              }
+            </Grid>
+          ):(
+            ""
+          )
+        }
+    </Grid>
+  )
+}
