@@ -78,17 +78,17 @@ const data = [
 function AboutPage() {
   return (
     <DefaultLayout>
-        <Head>
-          <title>About - Futurelabs studio</title>
-          <meta name="description" content="Learn more about the FutureLabs Community & Work"/>
-        </Head>
-        <FullPage video={videos[0]}/>
-        <HalfPage data={data[0]} />
-        <HalfPage data={data[1]} />
-        <FullPage video={videos[1]}/>
-        <HalfPage data={data[2]} />
-        <HalfPage data={data[3]} />
-        <FullPage video={videos[2]}/>
+      <Head>
+        <title>About - Futurelabs studio</title>
+        <meta name="description" content="Learn more about the FutureLabs Community & Work"/>
+      </Head>
+      <FullPage video={videos[0]}/>
+      <HalfPage data={data[0]} />
+      <HalfPage data={data[1]} />
+      <FullPage video={videos[1]}/>
+      <HalfPage data={data[2]} />
+      <HalfPage data={data[3]} />
+      <FullPage video={videos[2]}/>
     </DefaultLayout>
   )
 }

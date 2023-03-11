@@ -1,6 +1,7 @@
 import DefaultLayout from "../layout"
 import HalfPage from "../components/halfPage"
 import FullPage from "../components/fullPage";
+import Head from "next/head"
 
 const videos = [
 
@@ -49,15 +50,21 @@ const videos = [
 function WebsitesPage() {
  
   return (
-    <DefaultLayout>
-          {
+    <>
+      <Head>
+          <title>Websites - Futurelabs studio</title>
+          <meta name="description" content="Learn more about the FutureLabs Community & Work"/>
+      </Head>
+      <DefaultLayout>
+        {
           videos.map((item, index) => {
               return (
                   <FullPage key={index} video={item}/>
                 )
           })
         }
-    </DefaultLayout>
+      </DefaultLayout>
+    </>
   )
 }
 

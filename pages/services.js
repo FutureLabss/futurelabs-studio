@@ -1,6 +1,6 @@
 import DefaultLayout from "../layout"
 import FullPage from "../components/fullPage";
-import { Box } from "@mui/material"
+import Head from "next/head"
 
 const data = [
   {
@@ -58,15 +58,21 @@ const data = [
 function ServicesPage() {
  
   return (
-    <DefaultLayout>
-        {
-          data.map((item, index) => {
-              return (
-                  <FullPage key={index} video={item}/>
-                )
-          })
-        }
-    </DefaultLayout>
+    <>
+      <Head>
+          <title>Services - Futurelabs studio</title>
+          <meta name="description" content="Learn more about the FutureLabs Community & Work"/>
+      </Head>
+      <DefaultLayout>
+          {
+            data.map((item, index) => {
+                return (
+                    <FullPage key={index} video={item}/>
+                  )
+            })
+          }
+      </DefaultLayout>
+    </>
   )
 }
 
