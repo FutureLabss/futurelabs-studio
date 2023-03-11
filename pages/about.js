@@ -1,6 +1,7 @@
 import DefaultLayout from "../layout"
 import FullPage from "../components/fullPage";
 import HalfPage from "../components/halfPage";
+import Head from "next/head";
 
 const videos = [
     {
@@ -77,6 +78,10 @@ const data = [
 function AboutPage() {
   return (
     <DefaultLayout>
+        <Head>
+          <title>About - Futurelabs studio</title>
+          <meta name="description" content="Learn more about the FutureLabs Community & Work"/>
+        </Head>
         <FullPage video={videos[0]}/>
         <HalfPage data={data[0]} />
         <HalfPage data={data[1]} />
