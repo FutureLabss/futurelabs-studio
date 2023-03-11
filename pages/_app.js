@@ -14,7 +14,7 @@ function MyApp({ Component, emotionCache = clientSideEmotionCache, pageProps }) 
       <Head>
         <meta charSet="UTF-8" />
         <meta name="keywords" content="title, meta, nextjs" /> 
-        <meta name="viewport" content="width=device-width, intial-scale=1.0" /> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
         <meta
           name="FutureLabs Studio Website"
           content="Learn more about the FutureLabs Community & Work"
