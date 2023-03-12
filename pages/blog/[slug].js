@@ -8,9 +8,10 @@ import Image from 'next/image'
 export default function Blog({ frontmatter, markdown}){
     return (
         <>
-            {/* <Head>
-                <title>Futurelabs Blog | {frontmatter.title}</title>
-            </Head> */}
+            <Head>
+                <title>Blog - Futurelabs studio</title>
+                <meta name="description" content="Learn more about the FutureLabs Community & Work"/>
+            </Head>
             <Box sx={{ padding: "4% 4.6%"}}>
                 <Typography>{frontmatter.title}</Typography>
                 <Typography>{frontmatter.date}</Typography>
