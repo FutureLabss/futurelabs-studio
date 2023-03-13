@@ -19,7 +19,7 @@ const MuiIconButton = styled(IconButton)({
 export default function DefaultToolbar(props) {
   return (
     <Box sx={{ flexGrow: 1,}} >
-      <AppBar position="fixed" sx={{width: {md: "99.12vw", xs: "100vw"}, left: "0",}}>
+      <AppBar position="fixed">
         <Toolbar>
           <Box sx={{ flexGrow: 1, paddingLeft: {md: "2rem", xs: ""}}}>
            <Link href="/">
