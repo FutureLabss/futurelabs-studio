@@ -29,6 +29,7 @@ function MyApp({ Component, emotionCache = clientSideEmotionCache, pageProps }) 
         <meta property="twitter:title" content="FutureLabs Studio" />
         <meta property="twitter:description" content="Learn more about the FutureLabs Community & Work" />
         <meta property="twitter:image" content="https://res.cloudinary.com/usenmfon/image/upload/v1666106277/about_7_gtj6xz.png" />
+        <meta httpEquiv="Content-Security-Policy" content="media-src https://res.cloudinary.com;" />
         <title>Futurelabs Studio</title>
       </Head>
       <ThemeProvider theme={theme}>
