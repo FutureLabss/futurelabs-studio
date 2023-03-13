@@ -33,7 +33,7 @@ function DisplayDrawer({close}) {
     <>      
       <List sx={{ p: 1 , display: "flex", flexDirection: "column", alignItems: "center", height: "100%", width: {xs:240, md: 400 }}} >
         <Box sx={{ display: "flex", width: "inherit"}}>
-          <Link passHref href='/' >
+          <Link passHref href='/' alt="futurelabs_logo">
             <ListItem>
               <ListItemIcon> 
               <Image src='/images/futurelabs_icon.png' height="25" width="25" alt="futurelabs_logo" />
@@ -46,7 +46,7 @@ function DisplayDrawer({close}) {
         </Box>
         {/* <Divider sx={{my:2}} /> */}
         {routes.map((item, index) => (
-          <Link passHref href={item.path} key={index}>
+          <Link passHref href={item.path} key={index} alt={item.title}>
             <MuiListItem key={index} button>
               <ListItemText primary={item.title} />
             </MuiListItem>
