@@ -41,7 +41,7 @@ function HalfPage({ data }) {
                       </Typography>
                       {
                         data.button ? (
-                          <Link href={data.button}>
+                          <Link href={data.button} alt={data.buttonText}>
                             <Button variant="outlined" sx={{width: "12rem", marginTop: "1rem"}} color={data.buttonColor}>{data.buttonText}</Button>
                           </Link>  
                           ):(
@@ -66,7 +66,7 @@ function HalfPage({ data }) {
                     </Typography>
                     {
                         data.button ? (
-                          <Link href={data.button}>
+                          <Link href={data.button} alt={data.buttonText}>
                             <Button variant="outlined" sx={{width: "12rem", marginTop: "1rem"}} >{data.buttonText}</Button>
                           </Link>  
                           ):(

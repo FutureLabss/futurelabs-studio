@@ -67,7 +67,7 @@ export function AudioAndButton({ video, sound, handleSound }){
       <Grid item>
         {
           video.button ? (
-          <Link href={video.button}>
+          <Link href={video.button} alt={video.buttonText}>
             <Button variant="outlined" sx={{width: "12rem"}}>{video.buttonText}</Button>
           </Link>  
           ):(
