@@ -20,7 +20,7 @@ function FullPage({ video }) {
         <Video data={video} videoRef={videoRef} />
         <Box sx={{width:"100%", padding: "8% 4.6%", position: "absolute", bottom: {md: "0.5rem", xs: "2.5rem"}, left: 0, zIndex: 1}}>
           <Grid container gap={1} justifyContent="space-between" sx={{marginBottom:  {md: "0.2rem", xs: "1rem"},}}>
-          <Grid item md={5} xs={8}>
+          <Grid item md={5} xs={8} my={2}>
             <Typography variant="large" color="secondary" sx={{fontStyle: "normal", fontWeight: 700, lineHeight: "120%"}}>
               {video.text1}
             </Typography>
