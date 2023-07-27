@@ -15,7 +15,7 @@ a {
 }
 
 ::-webkit-scrollbar {
-   
+  display: none;
   width: 10px;
   height: 20px;
 }
