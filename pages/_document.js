@@ -10,10 +10,6 @@ export default class MyDocument extends Document {
        <Head>
          {this.props.emotionStyleTags}
          <script async src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
-         <meta
-          name="FutureLabs Studio Website"
-          content="Learn more about the FutureLabs Community & Work"
-        />
        </Head>
        <body>
          <Main />
