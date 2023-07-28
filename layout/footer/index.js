@@ -99,7 +99,7 @@ function Footer() {
         </Stack>
         <Stack sx={{height: {md: "30%", xs: "100%"}, display: "flex",  justifyContent: {md: "space-between", xs: "flex-end"}}}>
             <Grid container sx={{height: {md: "75%", xs: "80%"},}}>
-                <Grid item md={4} xs={12} sx={{ padding: "0 4.9%", display: "flex", flexDirection: "column", justifyContent: "space-around",}}>
+                <Grid item md={4} xs={12} sx={{ padding: "0 4.9%", display: "flex", flexDirection: "column", justifyContent: "space-evenly", alignItems: {sm: "center"}}}>
                     <Image src="https://res.cloudinary.com/dekbvdqnb/image/upload/v1634901054/Futurelabs-logo_1_udit2z.png" width="150" height="25" alt="futurelabs" style={{display: mobile ? "none": "block"}}/>
                     <Typography>
                         <strong>Get directions:</strong> <a href="tel:2347080343781" > +234 708 034-3781</a>
@@ -119,7 +119,7 @@ function Footer() {
                         </Link>
                     </Stack>
                 </Grid>
-                <Grid item md={4} display="flex" flexDirection="column" justifyContent="space-around" sx={{padding: {md: "0% 13%", xs: "0% 4.9%"},}}>
+                <Grid item md={4} xs={12} display="flex" flexDirection="column" justifyContent="space-around" sx={{padding: {md: "0% 13%", xs: "0% 4.9%"},alignItems:{sm: "center"}}}>
                     <Typography variant="h5" sx={{fontWeight: 700}}>Company</Typography>
                         <Link href="/">
                             <MuiTypography sx={{fontWeight: 300}}>HOME</MuiTypography>
@@ -134,11 +134,11 @@ function Footer() {
                             <MuiTypography sx={{fontWeight: 300}}>BLOG</MuiTypography>
                         </Link> */}
                 </Grid>
-                <Grid item md={4} xs={12} sx={{ padding: "0% 4.9%",}} display="flex" flexDirection="column" justifyContent="space-around" >
+                <Grid item md={4} xs={12} sx={{ padding: "0% 4.9%", alignItems:{sm: "center"}}} display="flex" flexDirection="column" justifyContent="space-around">
                     <Typography variant="h5" sx={{fontWeight: 700}}>Let&apos;s Get in Touch</Typography>
                     <Typography variant="caption">Sign up to receive our newsletter on industry trends</Typography>
-                        <form style={{display: "flex", flexDirection: "row"}} onSubmit={handleSubmit}>
-                            <SubscribeButton size="small" type="email" name="email" id="outlined-basic" label="Enter email here..." variant="outlined" sx={{borderTopRightRadius: "0", borderBottomRightRadius: "0"}} />
+                        <form style={{display: "flex", flexDirection: "row",width:"100%", maxWidth: "400px"}} onSubmit={handleSubmit}>
+                            <SubscribeButton size="small" type="email" name="email" id="outlined-basic" label="Enter email here..." variant="outlined" sx={{borderTopRightRadius: "0", borderBottomRightRadius: "0", width:"100%"}} />
                     {
                         loading ? <Stack sx={{display: "flex", flexDirection: "row", justifyContent: "center", border: "solid white" }}><CircularProgress size={30} /></Stack>:
                             <Button variant="contained" size="small" type="submit" sx={{color: "white", borderTopLeftRadius: "0", borderBottomLeftRadius: "0"}}>Send</Button>
@@ -146,7 +146,7 @@ function Footer() {
                         </form>
                 </Grid>
             </Grid>
-            <Box sx={{display: "flex", justifyContent: "center", color: "#fff", backgroundColor: "#FF9000",}}>
+            <Box sx={{display: "flex", justifyContent: "center", color: "#fff", backgroundColor: "#FF9000", padding: ".5rem 0rem"}}>
                 <Stack sx={{margin: "0 0.1rem"}}>&copy;</Stack>
                 <Stack sx={{margin: "0 0.1rem"}}>{date}</Stack>
                 <Stack sx={{margin: "0 0.1rem"}}>FUTURELABS</Stack>

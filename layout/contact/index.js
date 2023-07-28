@@ -39,7 +39,7 @@ function Contact() {
     <Box component="section" id="contact" sx={{height: "100vh", display: "flex", flexDirection: "column", justifyContent: "center", padding: "4% 4.6%"}}>
         <Typography variant="large"  sx={{textAlign: "center", fontWeight: 700, }}>Contact Us</Typography>
         <form onSubmit={handleSubmit}>
-            <Grid container my={2} sx={{ height: "70%"}}>
+            <Grid container my={2} sx={{ height: "70%", display: "flex", justifyContent: {sm: "space-between"} }}>
                 <Grid item md={6} display="flex" flexDirection="column" justifyContent="space-between">
                     <Stack sx={{marginTop: {md: "10px", xs: "20px"}}}>
                         <InputLabel htmlFor="name" sx={{ fontWeight: 700, fontSize: "18px",}}>My name is</InputLabel>
