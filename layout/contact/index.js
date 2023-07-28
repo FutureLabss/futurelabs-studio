@@ -37,10 +37,10 @@ function Contact() {
 
   return (
     <Box component="section" id="contact" sx={{height: "100vh", display: "flex", flexDirection: "column", justifyContent: "center", padding: "4% 4.6%"}}>
-        <Typography variant="large"  sx={{textAlign: "center", fontWeight: 700, }}>Contact Us</Typography>
+        <Typography variant="large"  sx={{textAlign: "center", fontWeight: 700 }}>Contact Us</Typography>
         <form onSubmit={handleSubmit}>
-            <Grid container my={2} sx={{ height: "70%", display: "flex", justifyContent: {sm: "space-between"} }}>
-                <Grid item md={6} display="flex" flexDirection="column" justifyContent="space-between">
+            <Grid container my={2} sx={{ height: "70%", display: "flex", justifyContent: { sm: "space-between"} }}>
+                <Grid item md={4} display="flex" flexDirection="column" justifyContent="space-between">
                     <Stack sx={{marginTop: {md: "10px", xs: "20px"}}}>
                         <InputLabel htmlFor="name" sx={{ fontWeight: 700, fontSize: "18px",}}>My name is</InputLabel>
                         <Input sx={{width: "20rem"}} type="text" name="name" id="name" placeholder="Your name" required/>
@@ -58,7 +58,7 @@ function Contact() {
                         <Input sx={{width: "20rem"}} type="email" name="email" id="email" placeholder="Your@email.com" required/>
                     </Stack>     
                 </Grid>
-                <Grid item md={6} display="flex" flexDirection="column">
+                <Grid item md={4} display="flex" flexDirection="column" sx={{ justifyContent: {sm: "space-between"} }}>
                     <Stack sx={{marginTop: {md: "10px", xs: "20px"}}}>
                         <InputLabel htmlFor="message" sx={{ fontWeight: 700, fontSize: "18px",}}>Message</InputLabel>
                         <TextField
@@ -84,7 +84,7 @@ function Contact() {
                     }
                     {
                         loading ? <Stack sx={{display: "flex", flexDirection: "row", justifyContent: "center", border: "solid white" }}><CircularProgress size={30} /></Stack>:
-                        <Button variant="contained" type="submit" sx={{width: "10rem", marginTop: {md: "10px", xs: "20px"}, color: "white"}}>Submit</Button>
+                        <Button variant="contained" type="submit" sx={{width: "10rem", marginTop: {md: "10px", xs: "20px",}, color: "white"}}>Submit</Button>
                     }
                 </Grid>
             </Grid>

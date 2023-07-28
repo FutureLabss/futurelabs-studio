@@ -134,7 +134,7 @@ function Footer() {
                             <MuiTypography sx={{fontWeight: 300}}>BLOG</MuiTypography>
                         </Link> */}
                 </Grid>
-                <Grid item md={4} xs={12} sx={{ padding: "0% 4.9%", alignItems:{sm: "center"}}} display="flex" flexDirection="column" justifyContent="space-around">
+                <Grid item md={4} xs={12} sx={{ padding: "0% 4.9%", alignItems:{sm: "center"}, justifyContent: {md: "space-around", xs: "space-around"}}} display="flex" flexDirection="column">
                     <Typography variant="h5" sx={{fontWeight: 700}}>Let&apos;s Get in Touch</Typography>
                     <Typography variant="caption">Sign up to receive our newsletter on industry trends</Typography>
                         <form style={{display: "flex", flexDirection: "row",width:"100%", maxWidth: "400px"}} onSubmit={handleSubmit}>
@@ -146,7 +146,7 @@ function Footer() {
                         </form>
                 </Grid>
             </Grid>
-            <Box sx={{display: "flex", justifyContent: "center", color: "#fff", backgroundColor: "#FF9000", padding: ".5rem 0rem"}}>
+            <Box sx={{display: "flex", justifyContent: "center", color: "#fff", backgroundColor: "#FF9000", padding: ".4rem 0rem"}}>
                 <Stack sx={{margin: "0 0.1rem"}}>&copy;</Stack>
                 <Stack sx={{margin: "0 0.1rem"}}>{date}</Stack>
                 <Stack sx={{margin: "0 0.1rem"}}>FUTURELABS</Stack>
