@@ -201,14 +201,14 @@ function Footer() {
             />
             <Typography>
               <strong>Get directions:</strong>{" "}
-              <a href="tel:2347080343781"> +234 708 034-3781</a>
+              <Link href="tel:2347080343781"> +234 708 034-3781</Link>
             </Typography>
             <Typography>
               <strong>Quick response:</strong>{" "}
-              <a href="mailto:info@futurelabs.com.ng">
+              <Link href="mailto:info@futurelabs.com.ng">
                 {" "}
                 info@futurelabs.com.ng
-              </a>
+              </Link>
             </Typography>
             <Stack sx={{ display: "flex", flexDirection: "row" }}>
               <Link href="https://twitter.com/FutureLabsNG" alt="twitter link">

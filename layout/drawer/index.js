@@ -41,7 +41,7 @@ function DisplayDrawer({ close }) {
         }}
       >
         <Box sx={{ display: "flex", width: "inherit" }}>
-          <Link passHref alt="futurelabs_logo">
+          <Link href={"/"} passHref alt="futurelabs_logo">
             <ListItem>
               <ListItemIcon>
                 <Image
